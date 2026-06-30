@@ -1,4 +1,4 @@
-# Search Guide
+﻿# Search Guide
 
 ## Local CLI Search
 
@@ -10,4 +10,6 @@ python scripts/search_catalog.py --domain Banking --role "Lead Quality Engineer"
 
 ## Static Site Search
 Use the built-in MkDocs search box in the left navigation.
+
+
 

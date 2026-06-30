@@ -1,4 +1,4 @@
-# Selenium Practice
+﻿# Selenium Practice
 
 Selenium practice focuses on enterprise UI automation, maintainable frameworks, locator strategy, synchronization, reporting, and CI/CD execution.
 
@@ -30,5 +30,7 @@ testdata/
 
 ## Generated Examples
 
-- [UI Automation Example 1](../../solutions/generated/UI_-00007/)
-- [Framework Architecture Example](../../solutions/generated/FRA-00080/)
+- [UI Automation Example 1](../../solutions/generated/UI_-00007.md)
+- [Framework Architecture Example](../../solutions/generated/FRA-00080.md)
+
+

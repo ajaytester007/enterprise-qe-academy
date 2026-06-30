@@ -1,4 +1,4 @@
-# SQL and Data Validation Practice
+﻿# SQL and Data Validation Practice
 
 SQL is essential for Enterprise QE, Data QA, ETL testing, healthcare payer validation, and banking reconciliation work.
 
@@ -45,6 +45,8 @@ SELECT business_key FROM target_table;
 
 ## Generated Examples
 
-- [SQL Generated Example 1](../solutions/generated/SQL-00004/)
-- [SQL Generated Example 2](../solutions/generated/SQL-00076/)
-- [SQL Generated Example 3](../solutions/generated/SQL-00130/)
+- [SQL Generated Example 1](../solutions/generated/SQL-00004.md)
+- [SQL Generated Example 2](../solutions/generated/SQL-00076.md)
+- [SQL Generated Example 3](../solutions/generated/SQL-00130.md)
+
+

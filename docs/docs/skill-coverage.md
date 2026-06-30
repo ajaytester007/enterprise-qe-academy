@@ -1,4 +1,4 @@
-# Skill Coverage
+﻿# Skill Coverage
 
 - Java, Python, SQL
 - Selenium, Playwright, Cypress, Tosca
@@ -10,3 +10,5 @@
 - Retail OMS/WMS/TMS, supply chain, Blue Yonder
 - AWS, Azure, Docker, Kubernetes, observability
 - AI/LLM validation and RAG testing
+
+

@@ -1,4 +1,4 @@
-# Generated Solution Samples
+﻿# Generated Solution Samples
 
 This section contains generated sample solution pages. They are intentionally not all listed in the left navigation to avoid clutter.
 
@@ -8,10 +8,13 @@ Use the site search box for `SQL`, `masking`, `payments`, `FHIR`, `Playwright`, 
 
 ## Featured Examples
 
-- [SQL Reconciliation](generated/SQL-00076/)
-- [Java Masking](generated/JAV-00092/)
-- [Security Masking](generated/SEC-00141/)
-- [API Testing](generated/API-00078/)
-- [Banking](generated/FIN-00082/)
-- [Healthcare](generated/HEA-00083/)
-- [Whiteboarding](generated/WHI-00089/)
+- [SQL Reconciliation](generated/SQL-00076.md)
+- [Java Masking](generated/JAV-00092.md)
+- [Security Masking](generated/SEC-00141.md)
+- [API Testing](generated/API-00078.md)
+- [Banking](generated/FIN-00082.md)
+- [Healthcare](generated/HEA-00083.md)
+- [Whiteboarding](generated/WHI-00089.md)
+
+
+

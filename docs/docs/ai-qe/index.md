@@ -1,4 +1,4 @@
-# AI Quality Engineering
+﻿# AI Quality Engineering
 
 AI QE focuses on validating LLM behavior, prompt quality, retrieval grounding, hallucination risk, test data generation, and AI-assisted quality workflows.
 
@@ -16,5 +16,7 @@ AI QE focuses on validating LLM behavior, prompt quality, retrieval grounding, h
 
 ## Generated Examples
 
-- [AI QE Example 1](../solutions/generated/AI_-00016/)
-- [AI QE Example 2](../solutions/generated/AI_-00088/)
+- [AI QE Example 1](../solutions/generated/AI_-00016.md)
+- [AI QE Example 2](../solutions/generated/AI_-00088.md)
+
+

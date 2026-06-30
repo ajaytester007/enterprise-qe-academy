@@ -1,4 +1,4 @@
-# Healthcare Payer Domain Pack
+﻿# Healthcare Payer Domain Pack
 
 Healthcare payer interviews test claims, enrollment, eligibility, provider/member data, EDI, FHIR, data quality, compliance, and modernization experience.
 
@@ -31,7 +31,9 @@ Healthcare payer interviews test claims, enrollment, eligibility, provider/membe
 
 ## Generated Examples
 
-- [Healthcare Example 1](../../solutions/generated/HEA-00011/)
-- [Healthcare Example 2](../../solutions/generated/HEA-00083/)
-- [Masking / PHI Example](../../solutions/generated/SEC-00087/)
-- [API Example](../../solutions/generated/API-00096/)
+- [Healthcare Example 1](../../solutions/generated/HEA-00011.md)
+- [Healthcare Example 2](../../solutions/generated/HEA-00083.md)
+- [Masking / PHI Example](../../solutions/generated/SEC-00087.md)
+- [API Example](../../solutions/generated/API-00096.md)
+
+

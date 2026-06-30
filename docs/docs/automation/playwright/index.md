@@ -1,4 +1,4 @@
-# Playwright Practice
+﻿# Playwright Practice
 
 Playwright is valuable for modern UI automation, API+UI testing, browser tracing, and stable end-to-end testing.
 
@@ -16,5 +16,7 @@ Playwright is valuable for modern UI automation, API+UI testing, browser tracing
 
 ## Generated Examples
 
-- [UI Automation Example](../../solutions/generated/UI_-00079/)
-- [CI/CD Quality Gate Example](../../solutions/generated/CI_-00081/)
+- [UI Automation Example](../../solutions/generated/UI_-00079.md)
+- [CI/CD Quality Gate Example](../../solutions/generated/CI_-00081.md)
+
+

@@ -1,4 +1,4 @@
-# Data Quality and ETL
+﻿# Data Quality and ETL
 
 Data quality is central to healthcare, banking, retail, cloud migration, and enterprise analytics modernization.
 
@@ -17,6 +17,8 @@ Data quality is central to healthcare, banking, retail, cloud migration, and ent
 
 ## Generated Examples
 
-- [ETL Example](../solutions/generated/ETL-00077/)
-- [SQL Example](../solutions/generated/SQL-00076/)
-- [Cloud Data Example](../solutions/generated/CLO-00085/)
+- [ETL Example](../solutions/generated/ETL-00077.md)
+- [SQL Example](../solutions/generated/SQL-00076.md)
+- [Cloud Data Example](../solutions/generated/CLO-00085.md)
+
+

@@ -1,0 +1,7 @@
+# Add under nav in docs/mkdocs.yml:
+#   - Catalog:
+#       - Catalog Home: catalog/index.md
+#       - By Category: catalog/by-category.md
+#       - By Domain: catalog/by-domain.md
+#       - By Difficulty: catalog/by-difficulty.md
+#       - By Role: catalog/by-role.md

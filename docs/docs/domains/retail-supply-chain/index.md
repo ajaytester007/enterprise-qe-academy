@@ -1,4 +1,4 @@
-# Retail and Supply Chain Domain Pack
+﻿# Retail and Supply Chain Domain Pack
 
 Retail and supply-chain QE covers order lifecycle, inventory, fulfillment, transportation, warehouse, pricing, promotions, and analytics.
 
@@ -19,5 +19,7 @@ Retail and supply-chain QE covers order lifecycle, inventory, fulfillment, trans
 
 ## Generated Examples
 
-- [Retail Example 1](../../solutions/generated/RET-00012/)
-- [Retail Example 2](../../solutions/generated/RET-00084/)
+- [Retail Example 1](../../solutions/generated/RET-00012.md)
+- [Retail Example 2](../../solutions/generated/RET-00084.md)
+
+

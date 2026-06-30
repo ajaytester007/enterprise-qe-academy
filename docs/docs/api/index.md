@@ -1,4 +1,4 @@
-# API Testing Practice
+﻿# API Testing Practice
 
 API testing validates service behavior, contract stability, integration correctness, security, and reliability across microservices and enterprise platforms.
 
@@ -31,6 +31,8 @@ given()
 
 ## Generated Examples
 
-- [API Testing Example 1](../solutions/generated/API-00006/)
-- [API Testing Example 2](../solutions/generated/API-00078/)
-- [API Testing Example 3](../solutions/generated/API-00150/)
+- [API Testing Example 1](../solutions/generated/API-00006.md)
+- [API Testing Example 2](../solutions/generated/API-00078.md)
+- [API Testing Example 3](../solutions/generated/API-00150.md)
+
+

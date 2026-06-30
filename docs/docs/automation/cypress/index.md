@@ -1,4 +1,4 @@
-# Cypress Practice
+﻿# Cypress Practice
 
 Cypress is useful for frontend component and end-to-end validation where fast feedback and developer-friendly debugging are important.
 
@@ -15,4 +15,6 @@ Cypress is useful for frontend component and end-to-end validation where fast fe
 
 ## Generated Examples
 
-- [UI Automation Example](../../solutions/generated/UI_-00115/)
+- [UI Automation Example](../../solutions/generated/UI_-00115.md)
+
+

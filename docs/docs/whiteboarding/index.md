@@ -1,11 +1,11 @@
-# Whiteboarding Studio
+﻿# Whiteboarding Studio
 
 Whiteboarding prepares you to explain systems, frameworks, quality strategy, and tradeoffs clearly.
 
 ## Whiteboard Structure
 
 ```text
-Problem → Context → Scope → Architecture → Data Flow → Test Strategy → Automation → CI/CD → Observability → Risks → Tradeoffs
+Problem â†’ Context â†’ Scope â†’ Architecture â†’ Data Flow â†’ Test Strategy â†’ Automation â†’ CI/CD â†’ Observability â†’ Risks â†’ Tradeoffs
 ```
 
 ## Example Whiteboard Prompts
@@ -19,5 +19,7 @@ Problem → Context → Scope → Architecture → Data Flow → Test Strategy �
 
 ## Generated Examples
 
-- [Whiteboard Example 1](../solutions/generated/WHI-00017/)
-- [Whiteboard Example 2](../solutions/generated/WHI-00089/)
+- [Whiteboard Example 1](../solutions/generated/WHI-00017.md)
+- [Whiteboard Example 2](../solutions/generated/WHI-00089.md)
+
+

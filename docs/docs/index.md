@@ -1,4 +1,4 @@
-# Enterprise QE Academy
+﻿# Enterprise QE Academy
 
 Enterprise QE Academy is a practical learning and interview-preparation platform for Enterprise Quality Engineering, SDET, Automation Architect, Data QA, Test Management, and QE Architecture roles.
 
@@ -33,8 +33,10 @@ Use the site search box for `SQL reconciliation`, `masking`, `FHIR`, `payments`,
 
 ## Featured Generated Examples
 
-- [SQL Reconciliation Example](solutions/generated/SQL-00076/)
-- [Masking Example](solutions/generated/SEC-00141/)
-- [API Testing Example](solutions/generated/API-00078/)
-- [Banking Example](solutions/generated/FIN-00082/)
-- [Healthcare Example](solutions/generated/HEA-00083/)
+- [SQL Reconciliation Example](solutions/generated/SQL-00076.md)
+- [Masking Example](solutions/generated/SEC-00141.md)
+- [API Testing Example](solutions/generated/API-00078.md)
+- [Banking Example](solutions/generated/FIN-00082.md)
+- [Healthcare Example](solutions/generated/HEA-00083.md)
+
+

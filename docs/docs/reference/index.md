@@ -1,17 +1,17 @@
-# Reference Library
+﻿# Reference Library
 
 The reference library provides reusable terminology, patterns, and answer frameworks.
 
 ## Technical Coding Answer
 
 ```text
-Clarify → Baseline → Optimize → Code → Test → Complexity → Edge Cases → Real-world mapping
+Clarify â†’ Baseline â†’ Optimize â†’ Code â†’ Test â†’ Complexity â†’ Edge Cases â†’ Real-world mapping
 ```
 
 ## QE Architecture Answer
 
 ```text
-Business flow → System context → Test layers → Automation → Data validation → CI/CD → Monitoring → Release readiness
+Business flow â†’ System context â†’ Test layers â†’ Automation â†’ Data validation â†’ CI/CD â†’ Monitoring â†’ Release readiness
 ```
 
 ## Common Quality Metrics
@@ -25,3 +25,5 @@ Business flow → System context → Test layers → Automation → Data validat
 - API contract pass rate
 - build stability
 - regression duration
+
+

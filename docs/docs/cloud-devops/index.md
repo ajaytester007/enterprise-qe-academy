@@ -1,4 +1,4 @@
-# Cloud and DevOps
+﻿# Cloud and DevOps
 
 Cloud and DevOps quality engineering validates build pipelines, deployment safety, observability, infrastructure behavior, and production readiness.
 
@@ -19,5 +19,7 @@ Cloud and DevOps quality engineering validates build pipelines, deployment safet
 
 ## Generated Examples
 
-- [Cloud Example](../solutions/generated/CLO-00085/)
-- [CI/CD Example](../solutions/generated/CI_-00081/)
+- [Cloud Example](../solutions/generated/CLO-00085.md)
+- [CI/CD Example](../solutions/generated/CI_-00081.md)
+
+

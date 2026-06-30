@@ -1,4 +1,4 @@
-# Java Practice
+﻿# Java Practice
 
 Java practice prepares you for coding rounds, whiteboarding, and automation-framework implementation.
 
@@ -23,9 +23,9 @@ Mask all digits except the last four while preserving separators.
 
 ## Generated Examples
 
-- [Java Collections Example](../solutions/generated/JAV-00001/)
-- [Java String Masking Example](../solutions/generated/JAV-00092/)
-- [Java Algorithm Example](../solutions/generated/JAV-00145/)
+- [Java Collections Example](../solutions/generated/JAV-00001.md)
+- [Java String Masking Example](../solutions/generated/JAV-00092.md)
+- [Java Algorithm Example](../solutions/generated/JAV-00145.md)
 
 ## Practice Commands
 
@@ -35,3 +35,5 @@ python scripts\search_catalog.py --category JAVA_STRINGS --keyword masking
 cd java\core
 mvn clean test
 ```
+
+
