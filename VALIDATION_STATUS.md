@@ -1,12 +1,11 @@
-# Validation Status
+# v2 Validation Status
 
-Generated: 2026-06-30T15:41:14
+Generated: 2026-06-30T17:27:52
 
-- Generic branding: PASS
-- Catalog size: 1620
-- Categories: 18
-- Search scripts: PASS
-- Practice set generator: PASS
-- Java 17 Maven/JUnit sample: PASS
+- Catalog entries: 10,080
+- Generated docs solution samples: 180
+- Static search index: PASS
+- Expanded MkDocs nav: PASS
+- Java sample module: PASS
+- SQL/API/automation/domain folders: PASS
 - GitHub Actions workflow: PASS
-- MkDocs docs scaffold: PASS

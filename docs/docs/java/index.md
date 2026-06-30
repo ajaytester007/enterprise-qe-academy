@@ -1,3 +1,3 @@
 # Java Practice
 
-This page is a placeholder for expanded solution packs, tests, evidence, and interview notes.
+Covers Java collections, strings, algorithms, JUnit, TestNG, data structures, defensive programming, null safety, and whiteboard-ready explanations.

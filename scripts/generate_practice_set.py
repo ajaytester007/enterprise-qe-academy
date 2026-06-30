@@ -10,15 +10,17 @@ def main():
     p.add_argument("--difficulty")
     p.add_argument("--category")
     p.add_argument("--domain")
+    p.add_argument("--role")
     args = p.parse_args()
 
     qs = [json.loads(line) for line in Path(args.catalog).read_text(encoding="utf-8").splitlines() if line.strip()]
     if args.difficulty: qs = [q for q in qs if q["difficulty"] == args.difficulty]
     if args.category: qs = [q for q in qs if q["category"] == args.category]
     if args.domain: qs = [q for q in qs if q["domain"].lower() == args.domain.lower()]
-    random.seed(100)
-    selected = random.sample(qs, min(args.count, len(qs)))
+    if args.role: qs = [q for q in qs if q["role"].lower() == args.role.lower()]
 
+    random.seed(2026)
+    selected = random.sample(qs, min(args.count, len(qs)))
     lines = ["# Generated Enterprise QE Practice Set", ""]
     for i, q in enumerate(selected, 1):
         lines += [

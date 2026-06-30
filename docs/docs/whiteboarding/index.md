@@ -1,3 +1,3 @@
 # Whiteboarding Studio
 
-This page is a placeholder for expanded solution packs, tests, evidence, and interview notes.
+Framework architecture, system design, testing strategy, release governance, observability, security, scalability, tradeoffs, and executive explanation.

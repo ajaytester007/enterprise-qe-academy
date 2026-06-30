@@ -1,6 +1,7 @@
-﻿**/target/
+**/target/
 **/site/
 __pycache__/
 *.pyc
 outputs/~*
+.venv/
 .DS_Store

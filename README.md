@@ -1,42 +1,46 @@
-# Enterprise QE Academy / Assessment Factory
+# Enterprise QE Academy v2
 
-Generic 2026 assessment practice, whiteboarding, and evidence-generation platform for modernization-heavy IT departments.
+A generic Enterprise Quality Engineering academy with a searchable assessment catalog, solution templates, domain packs, executable Java samples, SQL/API/automation labs, and MkDocs documentation.
 
-## Includes
+## v2 Content
 
-- 1620 searchable starter questions
-- CSV and JSONL catalog
-- Python search and practice-set scripts
-- Java 17 Maven/JUnit executable sample module
-- MkDocs documentation site
-- GitHub Actions CI workflow
-- Templates for question, solution, and evidence documentation
+- 10,080+ searchable catalog entries
+- Java, SQL, API, automation, data quality, domain, cloud, AI QE, and whiteboarding structure
+- 180 generated sample solution pages
+- CLI search and practice-set generator
+- Static search index for future custom UI
+- Java 17 Maven/JUnit sample tests
+- MkDocs site with expanded left navigation
 
-## Quick Start
+## Upgrade Existing Repo
 
-```powershell
-cd enterprise_qe_academy_consumable_solution
-python scripts/search_catalog.py --keyword masking --limit 10
-python scripts/generate_practice_set.py --count 50 --difficulty Medium --domain Banking
-cd java/enterprise-qe-core
-mvn clean test
-```
-
-## Local Docs Site
+Copy the contents of this package into the root of your existing `enterprise-qe-academy` repo, then:
 
 ```powershell
-cd docs
-pip install mkdocs-material
-mkdocs serve
-```
-
-## Publish to GitHub
-
-```powershell
-git init
 git add .
-git commit -m "Initial Enterprise QE Academy"
-git branch -M main
-git remote add origin https://github.com/ajaytester007/enterprise-qe-academy.git
-git push -u origin main
+git commit -m "Expand academy v2 catalog, docs, domains, and labs"
+git push
+cd docs
+mkdocs gh-deploy
+```
+
+## Search Examples
+
+```powershell
+python scripts/search_catalog.py --keyword masking --limit 10
+python scripts/search_catalog.py --category SQL_DATA_VALIDATION --difficulty Hard --limit 20
+python scripts/search_catalog.py --domain Banking --role "Lead Quality Engineer"
+```
+
+## Practice Set
+
+```powershell
+python scripts/generate_practice_set.py --count 50 --difficulty Medium --domain Banking
+```
+
+## Java Samples
+
+```powershell
+cd java/core
+mvn clean test
 ```

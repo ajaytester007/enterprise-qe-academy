@@ -1,3 +1,3 @@
-# SQL Practice
+# SQL and Data Validation Practice
 
-This page is a placeholder for expanded solution packs, tests, evidence, and interview notes.
+Covers source-to-target testing, joins, grouping, reconciliation, duplicate detection, data profiling, window functions, and ETL validation.

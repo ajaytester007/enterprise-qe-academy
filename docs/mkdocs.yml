@@ -1,15 +1,31 @@
 site_name: Enterprise QE Academy
 theme:
   name: material
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - search.highlight
+    - search.suggest
 nav:
   - Home: index.md
   - Search Guide: search-guide.md
-  - Skill Coverage: skill-coverage.md
-  - Roadmap: roadmap.md
   - Java: java/index.md
-  - SQL: sql/index.md
+  - SQL & Data Validation: sql/index.md
   - API Testing: api/index.md
-  - Banking: domains/banking.md
-  - Healthcare: domains/healthcare.md
+  - Automation:
+      - Selenium: automation/selenium/index.md
+      - Playwright: automation/playwright/index.md
+      - Cypress: automation/cypress/index.md
+  - Data Quality & ETL: data-quality/index.md
+  - Domains:
+      - Banking & FinTech: domains/banking/index.md
+      - Healthcare Payer: domains/healthcare/index.md
+      - Retail & Supply Chain: domains/retail-supply-chain/index.md
+  - Cloud & DevOps: cloud-devops/index.md
+  - AI QE: ai-qe/index.md
   - Whiteboarding: whiteboarding/index.md
-  - Evidence: evidence/index.md
+  - Solutions:
+      - Overview: solutions/index.md
+  - Reference: reference/index.md
+plugins:
+  - search

@@ -5,7 +5,7 @@ on:
   pull_request:
 
 jobs:
-  validate-and-test:
+  validate-catalog-and-java:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -17,4 +17,4 @@ jobs:
           distribution: temurin
           java-version: '17'
       - run: python scripts/validate_catalog.py
-      - run: cd java/enterprise-qe-core && mvn clean test
+      - run: cd java/core && mvn clean test

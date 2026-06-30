@@ -1,3 +1,3 @@
 # API Testing Practice
 
-This page is a placeholder for expanded solution packs, tests, evidence, and interview notes.
+Covers REST, SOAP, Postman, ReadyAPI, REST Assured, schema validation, contract testing, OAuth, negative testing, and microservice validation.
