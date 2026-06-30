@@ -1,0 +1,15 @@
+site_name: Enterprise QE Academy
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Search Guide: search-guide.md
+  - Skill Coverage: skill-coverage.md
+  - Roadmap: roadmap.md
+  - Java: java/index.md
+  - SQL: sql/index.md
+  - API Testing: api/index.md
+  - Banking: domains/banking.md
+  - Healthcare: domains/healthcare.md
+  - Whiteboarding: whiteboarding/index.md
+  - Evidence: evidence/index.md

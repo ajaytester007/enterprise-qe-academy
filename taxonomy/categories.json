@@ -1,0 +1,143 @@
+{
+  "JAVA_COLLECTIONS": [
+    "HashMap",
+    "LinkedHashMap",
+    "HashSet",
+    "LinkedHashSet",
+    "ArrayList",
+    "Deque"
+  ],
+  "JAVA_STRINGS": [
+    "String parsing",
+    "Regex validation",
+    "Tokenization",
+    "Masking",
+    "Normalization"
+  ],
+  "JAVA_ALGORITHMS": [
+    "Sorting",
+    "Searching",
+    "Two pointers",
+    "Sliding window",
+    "Recursion",
+    "Dynamic programming"
+  ],
+  "SQL_DATA_VALIDATION": [
+    "Joins",
+    "Group By",
+    "Window functions",
+    "Reconciliation",
+    "Source-to-target",
+    "Duplicate detection"
+  ],
+  "ETL_DATA_QUALITY": [
+    "Informatica",
+    "Talend",
+    "Spark",
+    "PySpark",
+    "Snowflake",
+    "Databricks",
+    "ADF"
+  ],
+  "API_TESTING": [
+    "REST",
+    "SOAP",
+    "Postman",
+    "ReadyAPI",
+    "REST Assured",
+    "Contract testing"
+  ],
+  "UI_AUTOMATION": [
+    "Selenium",
+    "Playwright",
+    "Cypress",
+    "POM",
+    "Synchronization",
+    "Cross-browser"
+  ],
+  "FRAMEWORK_ARCHITECTURE": [
+    "BDD",
+    "Cucumber",
+    "TestNG",
+    "JUnit",
+    "Parallel execution",
+    "Reporting"
+  ],
+  "CI_CD_DEVOPS": [
+    "Jenkins",
+    "GitHub Actions",
+    "GitLab",
+    "Quality gates",
+    "Build validation"
+  ],
+  "FINTECH_BANKING": [
+    "Payments",
+    "Lending",
+    "Credit cards",
+    "Settlement",
+    "Reconciliation",
+    "Mortgage",
+    "Capital markets"
+  ],
+  "HEALTHCARE_PAYER": [
+    "FACETS",
+    "MMIS",
+    "Claims",
+    "EDI X12",
+    "FHIR",
+    "HL7",
+    "Medicare",
+    "Medicaid"
+  ],
+  "RETAIL_SUPPLY_CHAIN": [
+    "OMS",
+    "WMS",
+    "TMS",
+    "Order lifecycle",
+    "Inventory",
+    "Fulfillment",
+    "Blue Yonder"
+  ],
+  "CLOUD_MODERNIZATION": [
+    "AWS",
+    "Azure",
+    "Docker",
+    "Kubernetes",
+    "Observability",
+    "Microservices"
+  ],
+  "PERFORMANCE_RELIABILITY": [
+    "JMeter",
+    "LoadRunner",
+    "NeoLoad",
+    "Scalability",
+    "Resiliency"
+  ],
+  "SECURITY_PRIVACY": [
+    "PII",
+    "PHI",
+    "PCI",
+    "HIPAA",
+    "Masking",
+    "Access control"
+  ],
+  "AI_QE": [
+    "LLM validation",
+    "Prompt testing",
+    "RAG evaluation",
+    "Synthetic data",
+    "AI defect triage"
+  ],
+  "WHITEBOARD_ARCHITECTURE": [
+    "Framework architecture",
+    "System design",
+    "Test strategy",
+    "Release governance"
+  ],
+  "BEHAVIORAL_STAR": [
+    "Leadership",
+    "Mentoring",
+    "Defect escalation",
+    "Stakeholder communication"
+  ]
+}
