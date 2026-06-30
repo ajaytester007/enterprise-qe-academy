@@ -1,0 +1,42 @@
+{
+  "SQL_DATA_VALIDATION": {
+    "hint1": "Identify the business key, grain, source, target, and expected reconciliation rule.",
+    "hint2": "Use count, duplicate, missing-key, transformation, and control-total checks.",
+    "solution": "For SQL data validation, validate counts, duplicates, missing keys, transformed columns, control totals, rejected rows, and audit evidence. Use GROUP BY/HAVING for duplicates, EXCEPT/MINUS or left joins for missing records, and aggregation for financial or claims control totals."
+  },
+  "JAVA_COLLECTIONS": {
+    "hint1": "Decide whether ordering, uniqueness, or frequency matters.",
+    "hint2": "Use LinkedHashMap when you need counts and first-seen deterministic ordering.",
+    "solution": "Use a LinkedHashMap to count elements while preserving first occurrence order. Iterate once to build counts, then return keys whose count is greater than one. Time O(n), space O(n)."
+  },
+  "JAVA_STRINGS": {
+    "hint1": "Scan the string once or twice depending on whether frequency or masking is required.",
+    "hint2": "For first unique, use LinkedHashMap. For masking, count digits first, then mask all but the final four.",
+    "solution": "For string problems, clarify case sensitivity, whitespace, nulls, punctuation, and expected output. Use deterministic scans and explain edge cases clearly."
+  },
+  "API_TESTING": {
+    "hint1": "Start with contract, authentication, payload, status code, and schema.",
+    "hint2": "Add negative tests, idempotency, retries, downstream validation, logs, and trace IDs.",
+    "solution": "A strong API testing answer covers endpoint contract, headers, authentication, required/optional fields, status codes, schema validation, positive and negative tests, downstream persistence/event validation, observability, and CI integration."
+  },
+  "UI_AUTOMATION": {
+    "hint1": "Describe framework layers: tests, pages, components, utilities, data, config, and reports.",
+    "hint2": "Address locators, waits, flakiness, parallel execution, screenshots/traces, and CI.",
+    "solution": "A strong UI automation answer covers POM or Screenplay, stable selectors, explicit waits, reusable components, test data, failure evidence, parallel execution, CI/CD, and flaky-test triage."
+  },
+  "FINTECH_BANKING": {
+    "hint1": "Anchor on initiation, validation, posting, settlement, reconciliation, and reporting.",
+    "hint2": "Add controls for duplicate prevention, audit trail, balances, reversals, fraud, and compliance.",
+    "solution": "For banking QE, explain the business lifecycle, then cover API/UI/database validation, posting and settlement checks, reconciliation, negative scenarios, fraud/security controls, audit logs, and release certification evidence."
+  },
+  "HEALTHCARE_PAYER": {
+    "hint1": "Anchor on member, provider, claims, enrollment, eligibility, benefits, and compliance.",
+    "hint2": "Mention EDI X12, FHIR/HL7, FACETS/HealthRules/MMIS, PHI masking, and reconciliation.",
+    "solution": "For healthcare payer QE, cover 834 enrollment, 837 claims, 835 remittance, 270/271 eligibility, member/provider data, benefits, FACETS/HealthRules/MMIS, FHIR/HL7 integrations, PHI masking, and audit evidence."
+  },
+  "WHITEBOARD_ARCHITECTURE": {
+    "hint1": "Start with scope, actors, systems, data flow, and quality risks.",
+    "hint2": "Layer the answer with test strategy, automation, data validation, CI/CD, observability, and governance.",
+    "solution": "A strong whiteboard answer covers business context, boundaries, data flow, test layers, automation, data validation, CI/CD gates, observability, risks, rollback, and release readiness."
+  }
+}

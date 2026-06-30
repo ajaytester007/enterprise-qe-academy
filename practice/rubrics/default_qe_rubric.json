@@ -1,0 +1,36 @@
+{
+  "rubric_name": "Enterprise QE Interview Rubric",
+  "max_score": 100,
+  "dimensions": [
+    {
+      "name": "Problem Understanding",
+      "points": 15,
+      "criteria": "Clarifies scope, assumptions, inputs, outputs, and business context."
+    },
+    {
+      "name": "Technical Approach",
+      "points": 20,
+      "criteria": "Uses appropriate algorithm, SQL, API, automation, or architecture strategy."
+    },
+    {
+      "name": "Edge Cases and Risks",
+      "points": 15,
+      "criteria": "Identifies nulls, duplicates, boundary cases, failures, security, data quality, and production risks."
+    },
+    {
+      "name": "Testing Strategy",
+      "points": 20,
+      "criteria": "Explains positive, negative, regression, data-driven, and automation coverage."
+    },
+    {
+      "name": "Evidence and Observability",
+      "points": 10,
+      "criteria": "Describes logs, reports, screenshots, CI output, reconciliation, metrics, or audit evidence."
+    },
+    {
+      "name": "Communication and Interview Defense",
+      "points": 20,
+      "criteria": "Explains clearly, links to real enterprise projects, and handles follow-up questions."
+    }
+  ]
+}
