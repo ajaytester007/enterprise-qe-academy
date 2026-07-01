@@ -1,0 +1,296 @@
+[
+  {
+    "source": "C:\\GitHub\\Enterprise_QE_Academy_Consumable_GitSolution\\enterprise_qe_academy_consumable_solution\\jobs\\sample_banking_lead_qe_jd.md",
+    "role_title": "Lead Quality Engineer - Banking API and Data Platforms",
+    "detected_domain": "Banking",
+    "seniority_level": 4,
+    "required_skills": [
+      "API Testing",
+      "Banking",
+      "CI/CD",
+      "Leadership",
+      "Data Quality",
+      "Performance",
+      "Security",
+      "Agile",
+      "Databricks",
+      "Java"
+    ],
+    "preferred_skills": [
+      "Selenium",
+      "Snowflake"
+    ],
+    "keyword_hits": {
+      "Java": 1,
+      "Python": 1,
+      "SQL": 1,
+      "API Testing": 3,
+      "Playwright": 1,
+      "Selenium": 1,
+      "CI/CD": 3,
+      "Snowflake": 1,
+      "Databricks": 1,
+      "Data Quality": 2,
+      "Performance": 2,
+      "Security": 2,
+      "Banking": 3,
+      "Leadership": 3,
+      "Agile": 1
+    },
+    "missing_from_academy": [
+      "Agile",
+      "Python"
+    ],
+    "readiness_score": 87,
+    "readiness_band": "Interview-ready",
+    "recommended_modules": [
+      {
+        "id": "JAV-05024",
+        "title": "Regex validation for Banking CI/CD quality gate adoption",
+        "domain": "Banking",
+        "role": "Lead Quality Engineer",
+        "difficulty": "Hard",
+        "skills": [
+          "Banking",
+          "Data Quality",
+          "CI/CD",
+          "Java",
+          "Leadership"
+        ],
+        "matched_skills": [
+          "Banking",
+          "CI/CD",
+          "Data Quality",
+          "Java",
+          "Leadership"
+        ]
+      },
+      {
+        "id": "PER-07556",
+        "title": "SLA validation for Banking API-first transformation",
+        "domain": "Banking",
+        "role": "Lead Quality Engineer",
+        "difficulty": "Hard",
+        "skills": [
+          "Performance",
+          "Banking",
+          "Data Quality",
+          "API Testing",
+          "Leadership"
+        ],
+        "matched_skills": [
+          "API Testing",
+          "Banking",
+          "Data Quality",
+          "Leadership",
+          "Performance"
+        ]
+      },
+      {
+        "id": "PER-06062",
+        "title": "LoadRunner for Banking CI/CD quality gate adoption",
+        "domain": "Banking",
+        "role": "Lead Quality Engineer",
+        "difficulty": "Hard",
+        "skills": [
+          "Banking",
+          "CI/CD",
+          "Leadership",
+          "Performance"
+        ],
+        "matched_skills": [
+          "Banking",
+          "CI/CD",
+          "Leadership",
+          "Performance"
+        ]
+      },
+      {
+        "id": "JAV-09254",
+        "title": "Normalization for Banking CI/CD quality gate adoption",
+        "domain": "Banking",
+        "role": "Lead Quality Engineer",
+        "difficulty": "Hard",
+        "skills": [
+          "Banking",
+          "CI/CD",
+          "Java",
+          "Leadership"
+        ],
+        "matched_skills": [
+          "Banking",
+          "CI/CD",
+          "Java",
+          "Leadership"
+        ]
+      },
+      {
+        "id": "ETL-07943",
+        "title": "PySpark for Banking data governance program",
+        "domain": "Banking",
+        "role": "Lead Quality Engineer",
+        "difficulty": "Hard",
+        "skills": [
+          "Banking",
+          "Databricks",
+          "Leadership",
+          "Data Quality"
+        ],
+        "matched_skills": [
+          "Banking",
+          "Data Quality",
+          "Databricks",
+          "Leadership"
+        ]
+      },
+      {
+        "id": "JAV-08426",
+        "title": "Anagram detection for Banking data governance program",
+        "domain": "Banking",
+        "role": "Lead Quality Engineer",
+        "difficulty": "Hard",
+        "skills": [
+          "Banking",
+          "Leadership",
+          "Java"
+        ],
+        "matched_skills": [
+          "Banking",
+          "Java",
+          "Leadership"
+        ]
+      },
+      {
+        "id": "ETL-01085",
+        "title": "CDC validation for Banking cloud migration",
+        "domain": "Banking",
+        "role": "Lead Quality Engineer",
+        "difficulty": "Hard",
+        "skills": [
+          "Data Quality",
+          "Banking",
+          "Cloud",
+          "Leadership"
+        ],
+        "matched_skills": [
+          "Banking",
+          "Data Quality",
+          "Leadership"
+        ]
+      },
+      {
+        "id": "JAV-05727",
+        "title": "Greedy for Banking data governance program",
+        "domain": "Banking",
+        "role": "Lead Quality Engineer",
+        "difficulty": "Hard",
+        "skills": [
+          "Banking",
+          "Leadership",
+          "Java"
+        ],
+        "matched_skills": [
+          "Banking",
+          "Java",
+          "Leadership"
+        ]
+      },
+      {
+        "id": "SQL-08230",
+        "title": "Group By for Banking cloud migration",
+        "domain": "Banking",
+        "role": "Lead Quality Engineer",
+        "difficulty": "Hard",
+        "skills": [
+          "Banking",
+          "Cloud",
+          "Data Quality",
+          "Leadership",
+          "SQL"
+        ],
+        "matched_skills": [
+          "Banking",
+          "Data Quality",
+          "Leadership"
+        ]
+      },
+      {
+        "id": "SEC-03525",
+        "title": "HIPAA for Banking cloud migration",
+        "domain": "Banking",
+        "role": "Lead Quality Engineer",
+        "difficulty": "Hard",
+        "skills": [
+          "Security",
+          "Banking",
+          "Healthcare",
+          "Cloud",
+          "Leadership"
+        ],
+        "matched_skills": [
+          "Banking",
+          "Leadership",
+          "Security"
+        ]
+      },
+      {
+        "id": "JAV-03925",
+        "title": "HashSet for Banking test automation modernization",
+        "domain": "Banking",
+        "role": "Lead Quality Engineer",
+        "difficulty": "Hard",
+        "skills": [
+          "Banking",
+          "Java",
+          "Leadership"
+        ],
+        "matched_skills": [
+          "Banking",
+          "Java",
+          "Leadership"
+        ]
+      },
+      {
+        "id": "RET-07122",
+        "title": "Inventory for Banking CI/CD quality gate adoption",
+        "domain": "Banking",
+        "role": "Lead Quality Engineer",
+        "difficulty": "Hard",
+        "skills": [
+          "Banking",
+          "CI/CD",
+          "Leadership",
+          "Retail"
+        ],
+        "matched_skills": [
+          "Banking",
+          "CI/CD",
+          "Leadership"
+        ]
+      }
+    ],
+    "interview_focus": [
+      "Prepare a STAR-style story demonstrating API Testing in an enterprise delivery context.",
+      "Prepare a STAR-style story demonstrating Banking in an enterprise delivery context.",
+      "Prepare a STAR-style story demonstrating CI/CD in an enterprise delivery context.",
+      "Prepare a STAR-style story demonstrating Leadership in an enterprise delivery context.",
+      "Prepare a STAR-style story demonstrating Data Quality in an enterprise delivery context.",
+      "Prepare a STAR-style story demonstrating Performance in an enterprise delivery context."
+    ],
+    "portfolio_recommendations": [
+      "Create or refresh a GitHub demo showing API Testing test strategy, automation evidence, and CI results.",
+      "Create or refresh a GitHub demo showing Banking test strategy, automation evidence, and CI results.",
+      "Create or refresh a GitHub demo showing CI/CD test strategy, automation evidence, and CI results.",
+      "Create or refresh a GitHub demo showing Leadership test strategy, automation evidence, and CI results.",
+      "Create or refresh a GitHub demo showing Data Quality test strategy, automation evidence, and CI results."
+    ],
+    "resume_talking_points": [
+      "Add a quantified bullet linking API Testing to business risk reduction, quality gates, or release readiness.",
+      "Add a quantified bullet linking Banking to business risk reduction, quality gates, or release readiness.",
+      "Add a quantified bullet linking CI/CD to business risk reduction, quality gates, or release readiness.",
+      "Add a quantified bullet linking Leadership to business risk reduction, quality gates, or release readiness.",
+      "Add a quantified bullet linking Data Quality to business risk reduction, quality gates, or release readiness.",
+      "Add a quantified bullet linking Performance to business risk reduction, quality gates, or release readiness."
+    ]
+  }
+]

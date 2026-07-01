@@ -1,0 +1,29 @@
+name: v4 JD Readiness
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'platform_core/jd_intelligence.py'
+      - 'scripts/build_v4_jd_readiness_release.py'
+      - 'jobs/**'
+      - '.github/workflows/v4-jd-readiness.yml'
+
+jobs:
+  build-jd-readiness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build JD readiness dashboard
+        run: python scripts/build_v4_jd_readiness_release.py --jd jobs/sample_banking_lead_qe_jd.md
+      - name: Upload JD readiness artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: v4-jd-readiness
+          path: |
+            outputs/v4/readiness_dashboard.json
+            outputs/v4/jd_readiness/
+            docs/docs/v4/readiness-dashboard.md
