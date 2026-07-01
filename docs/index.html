@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enterprise QE Academy v5</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Enterprise QE Academy v5</p>
+      <h1>Interactive QE Interview Platform</h1>
+      <p class="subtitle">Practice interviews, readiness analytics, JD intelligence, and curated learning paths in one deployable portal.</p>
+    </div>
+    <div class="score-card">
+      <span>Readiness</span>
+      <strong id="readinessScore">--</strong>
+      <small id="readinessLabel">Loading dashboard</small>
+    </div>
+  </header>
+
+  <main>
+    <section class="grid cards">
+      <article>
+        <h2>Interview Simulator</h2>
+        <p>Launch a structured session from available knowledge nodes and practice one question at a time.</p>
+        <button id="launchInterview">Start practice</button>
+      </article>
+      <article>
+        <h2>JD Readiness</h2>
+        <p>Review extracted skills, gaps, matched academy modules, and resume talking points.</p>
+        <button id="showJD">Open JD dashboard</button>
+      </article>
+      <article>
+        <h2>Quality Intelligence</h2>
+        <p>Inspect quality scores, missing evidence, placeholder risk, and content improvement needs.</p>
+        <button id="showQuality">Open quality report</button>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <h2 id="panelTitle">Platform Overview</h2>
+        <span id="nodeCount"></span>
+      </div>
+      <div id="contentPanel" class="content-panel"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

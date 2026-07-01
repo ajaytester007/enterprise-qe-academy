@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enterprise QE Academy v5 Interview Engine</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Enterprise QE Academy v5</p>
+      <h1>Interview Session Engine 2.0</h1>
+      <p class="subtitle">Run a one-question-at-a-time mock interview with hints, answer capture, rubric scoring, follow-ups, progress save/resume, and export.</p>
+    </div>
+    <div class="header-actions">
+      <button id="resumeBtn" class="secondary">Resume saved session</button>
+      <button id="resetProgressBtn" class="danger">Reset</button>
+      <button id="exportSessionBtn" class="secondary">Export Markdown</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="panel filters">
+      <h2>Session setup</h2>
+      <label>Domain
+        <select id="domainFilter"><option value="">All domains</option></select>
+      </label>
+      <label>Role
+        <select id="roleFilter"><option value="">All roles</option></select>
+      </label>
+      <label>Difficulty
+        <select id="difficultyFilter"><option value="">All difficulty</option></select>
+      </label>
+      <label>Keyword
+        <input id="keywordFilter" placeholder="API, SQL, Playwright, FHIR..." />
+      </label>
+      <label>Session size
+        <input id="sessionSize" type="number" min="1" max="50" value="5" />
+      </label>
+      <label class="checkline"><input id="shuffleToggle" type="checkbox" checked /> Shuffle matching questions</label>
+      <div class="button-row">
+        <button id="applyFiltersBtn">Apply filters</button>
+        <button id="startPracticeBtn" class="primary">Start interview</button>
+      </div>
+      <p id="filterSummary" class="muted">Loading catalog...</p>
+
+      <h3>Session tools</h3>
+      <div class="button-column">
+        <button id="copyPromptBtn" class="secondary">Copy ChatGPT prompt</button>
+        <button id="markReviewBtn" class="secondary">Mark for review</button>
+        <button id="completeBtn" class="primary">Complete session</button>
+      </div>
+    </aside>
+
+    <section class="panel practice">
+      <div id="emptyState" class="empty">
+        <h2>Ready for a real mock interview</h2>
+        <p>Choose filters and click <strong>Start interview</strong>. The engine will present one question at a time, save your answers locally, and generate a session summary.</p>
+      </div>
+
+      <article id="questionCard" class="question-card hidden">
+        <div class="card-topline">
+          <span id="progressPill" class="pill">Question 1 of 5</span>
+          <span id="metaPill" class="pill muted-pill"></span>
+          <span id="timerPill" class="pill timer-pill">00:00</span>
+        </div>
+        <h2 id="questionTitle"></h2>
+        <p id="questionProblem"></p>
+
+        <section class="interviewer-box">
+          <strong>Interviewer mode</strong>
+          <p id="interviewerPrompt">Answer first. Then use hints only if needed. Reveal the model answer after you have attempted your response.</p>
+        </section>
+
+        <section class="answer-box">
+          <label>Your answer
+            <textarea id="answerNotes" rows="10" placeholder="Speak or type your structured answer: assumptions, approach, risks, testing strategy, evidence, production readiness..."></textarea>
+          </label>
+        </section>
+
+        <div class="button-row wrap">
+          <button id="hint1Btn">Hint 1</button>
+          <button id="hint2Btn">Hint 2</button>
+          <button id="answerBtn">Reveal model answer</button>
+          <button id="followupsBtn">Follow-ups</button>
+          <button id="critiqueBtn" class="secondary">Self-critique checklist</button>
+        </div>
+
+        <section id="supportPanel" class="support-panel hidden"></section>
+
+        <section class="score-grid">
+          <label>Understanding <input class="scoreInput" data-score="understanding" type="number" min="0" max="15" value="0"><small>/15</small></label>
+          <label>Approach <input class="scoreInput" data-score="approach" type="number" min="0" max="20" value="0"><small>/20</small></label>
+          <label>Risks <input class="scoreInput" data-score="risks" type="number" min="0" max="15" value="0"><small>/15</small></label>
+          <label>Testing <input class="scoreInput" data-score="testing" type="number" min="0" max="20" value="0"><small>/20</small></label>
+          <label>Evidence <input class="scoreInput" data-score="evidence" type="number" min="0" max="10" value="0"><small>/10</small></label>
+          <label>Communication <input class="scoreInput" data-score="communication" type="number" min="0" max="20" value="0"><small>/20</small></label>
+        </section>
+
+        <div class="session-footer">
+          <strong>Total score: <span id="totalScore">0</span>/100</strong>
+          <div class="button-row">
+            <button id="prevBtn" class="secondary">Previous</button>
+            <button id="saveBtn" class="secondary">Save</button>
+            <button id="nextBtn" class="primary">Next</button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <aside class="panel analytics">
+      <h2>Interview analytics</h2>
+      <div class="metric"><span>Catalog loaded</span><strong id="catalogCount">0</strong></div>
+      <div class="metric"><span>Filtered</span><strong id="filteredCount">0</strong></div>
+      <div class="metric"><span>Answered</span><strong id="answeredCount">0</strong></div>
+      <div class="metric"><span>Average score</span><strong id="averageScore">0</strong></div>
+      <div class="metric"><span>Readiness</span><strong id="readinessScore">Not started</strong></div>
+      <div class="progressbar"><div id="progressBar"></div></div>
+      <h3>Current session</h3>
+      <ol id="sessionList" class="session-list"></ol>
+      <section id="summaryPanel" class="summary-panel hidden"></section>
+    </aside>
+  </main>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="app.js"></script>
+</body>
+</html>

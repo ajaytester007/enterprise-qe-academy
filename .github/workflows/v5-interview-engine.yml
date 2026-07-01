@@ -1,0 +1,27 @@
+name: v5 Interview Engine Build
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'webapp/v5/**'
+      - 'platform_core/v5_interactive_export.py'
+      - 'scripts/build_v5_interview_engine.py'
+      - 'catalog/questions.jsonl'
+
+jobs:
+  build-v5-interview-engine:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build v5 interview engine
+        run: python scripts/build_v5_interview_engine.py --limit 5000
+      - name: Upload v5 static app artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: v5-interview-engine-site
+          path: outputs/v5/site
