@@ -5,8 +5,18 @@ from __future__ import annotations
 import argparse
 import json
 from pathlib import Path
+import sys
 
-NODES = Path("outputs/v4/knowledge_nodes.json")
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+try:
+    from platform_core.repo_paths import ensure_repo_imports
+    ROOT = ensure_repo_imports(Path(__file__).resolve())
+except Exception:
+    ROOT = Path.cwd()
+
+NODES = ROOT / "outputs" / "v4" / "knowledge_nodes.json"
 
 
 def load_nodes():

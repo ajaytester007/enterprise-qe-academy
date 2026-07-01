@@ -4,9 +4,19 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+import sys
 
-OUT = Path("outputs/v4")
-DOCS = Path("docs/docs/v4")
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+try:
+    from platform_core.repo_paths import ensure_repo_imports
+    ROOT = ensure_repo_imports(Path(__file__).resolve())
+except Exception:
+    ROOT = Path.cwd()
+
+OUT = ROOT / "outputs" / "v4"
+DOCS = ROOT / "docs" / "docs" / "v4"
 
 
 def load(name):

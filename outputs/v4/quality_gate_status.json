@@ -1,0 +1,14 @@
+{
+  "total_nodes": 28,
+  "passed": 28,
+  "review": 0,
+  "failed": 0,
+  "average_score": 100.0,
+  "fail_rate": 0.0,
+  "quality_gate": "pass",
+  "thresholds": {
+    "min_average": 75,
+    "max_fail_rate": 0.2
+  },
+  "top_issues": {}
+}

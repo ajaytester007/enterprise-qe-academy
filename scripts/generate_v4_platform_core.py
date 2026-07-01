@@ -15,10 +15,16 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 from typing import Dict, List
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 from platform_core.knowledge_model import build_node, group_counts, read_jsonl, write_json, write_markdown
+from platform_core.repo_paths import ensure_repo_imports
 
-ROOT = Path.cwd()
+ROOT = ensure_repo_imports(Path(__file__).resolve())
 CATALOG = ROOT / "catalog" / "questions.jsonl"
 OUT = ROOT / "outputs" / "v4"
 DOCS = ROOT / "docs" / "docs" / "v4" / "generated"

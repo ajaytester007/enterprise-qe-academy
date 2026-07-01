@@ -1,0 +1,30 @@
+name: v4-quality-intelligence
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'catalog/**'
+      - 'platform_core/**'
+      - 'scripts/**'
+      - '.github/workflows/v4-quality-intelligence.yml'
+
+jobs:
+  build-v4-quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build v4 release artifacts
+        run: |
+          python scripts/build_v4_release.py --domain Banking --role "Lead Quality Engineer" --difficulty Hard --limit 250
+      - name: Upload v4 artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: enterprise-qe-academy-v4-quality-artifacts
+          path: |
+            outputs/v4/**
+            docs/docs/v4/**
