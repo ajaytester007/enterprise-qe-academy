@@ -1,87 +1,86 @@
-const panel = document.getElementById('contentPanel');
-const title = document.getElementById('panelTitle');
-let platformData = {};
-
-function esc(value) {
-  return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+const state = { catalog: [], filtered: [], session: [], current: 0, responses: {}, startedAt: null, elapsedBase: 0, timer: null };
+const STORE_KEY = "eqa_v5_interview_session_v2";
+const fallbackCatalog = [{id:"DEMO-001", title:"PII for Banking data governance program", domain:"Banking", role:"Lead Quality Engineer", difficulty:"Hard", category:"SECURITY_PRIVACY", concept:"PII", problem:"Design, implement, test, or whiteboard a hard solution involving PII for a Banking data governance program. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.", hint1:"Clarify scope, PII classes, business grain, inputs, outputs, systems of record, consumers, regulatory constraints, and risk.", hint2:"Structure the answer using data discovery, classification, masking/tokenization, access controls, audit evidence, automated validation, CI/CD gates, and residual risk.", model_answer:"A strong answer defines the banking data governance scope first: customer identifiers, account numbers, tax identifiers, addresses, contact information, transaction attributes, and downstream analytical consumers. I would build controls for discovery, classification, lineage, masking/tokenization, least-privilege access, retention, encryption, audit logging, and evidence capture. Testing covers positive and negative PII detection, masking reversibility rules, role-based access, lineage completeness, regulatory reporting, and production monitoring. Evidence should include test results, DQ checks, access review exports, audit logs, lineage screenshots, exception reports, and sign-off from data owners.", followups:["How would you automate PII discovery?","How would you prove masking is effective?","What risks remain after controls are deployed?"]}];
+const $ = id => document.getElementById(id);
+const limits = {understanding:15, approach:20, risks:15, testing:20, evidence:10, communication:20};
+function toast(msg){ const t=$("toast"); t.textContent=msg; t.classList.remove("hidden"); setTimeout(()=>t.classList.add("hidden"),2200); }
+function uniq(values){ return [...new Set(values.filter(Boolean))].sort(); }
+function asArray(v){ if(Array.isArray(v)) return v; if(!v) return []; return String(v).split(/[;\n]/).map(x=>x.trim()).filter(Boolean); }
+function first(...vals){ return vals.find(v => v !== undefined && v !== null && String(v).trim() !== ""); }
+function normalizeQuestion(q, index){
+  const source = q.node || q.question || q;
+  const title = first(source.title, source.name, `${source.id || "Q"+index} — ${source.concept || source.category || "Enterprise QE Scenario"}`);
+  const problem = first(source.problem, source.prompt, source.scenario, source.description, source.question_text, source.question, `Explain a production-ready quality engineering solution for ${title}.`);
+  const hints = asArray(source.hints);
+  const solutions = source.solutions || source.solution || {};
+  const model = first(source.model_answer, source.answer, source.reference_answer, source.solution_text, solutions.model_answer, solutions.primary, solutions.interview_answer, "Use the Enterprise QE answer framework: clarify scope, propose approach, define test strategy, cover edge cases, describe evidence, and explain production readiness.");
+  return { id:first(source.id, `Q-${index+1}`), title, domain:first(source.domain, source.industry, "General"), role:first(source.role, "Quality Engineer"), difficulty:first(source.difficulty, "Medium"), category:first(source.category, source.category_name, "GENERAL"), concept:first(source.concept, source.skill, source.topic, "Enterprise QE"), problem, hint1:first(source.hint1, hints[0], `Clarify scope, inputs, outputs, risks, and expected evidence for ${source.concept || title}.`), hint2:first(source.hint2, hints[1], "Use approach, edge cases, validation strategy, evidence, CI/CD readiness, and follow-up risks."), model_answer:String(model), followups:asArray(first(source.followups, source.follow_up_questions, source.followup_questions)).length ? asArray(first(source.followups, source.follow_up_questions, source.followup_questions)) : ["How would you automate this?", "How would you prove readiness?", "What risks remain?"], raw: source };
 }
-
-function readinessScore(data) {
-  const dash = data.readinessDashboard || {};
-  const direct = dash.overall_readiness_score || dash.overallScore || dash.score;
-  if (typeof direct === 'number') return Math.round(direct);
-  const analyses = data.jdReadiness || [];
-  const scores = analyses.map(a => a.readiness_score || a.score).filter(v => typeof v === 'number');
-  if (scores.length) return Math.round(scores.reduce((a,b)=>a+b,0) / scores.length);
-  return null;
+async function fetchJson(path){ const res = await fetch(path, {cache:"no-store"}); if(!res.ok) throw new Error(`${path} HTTP ${res.status}`); return res.json(); }
+async function loadCatalog(){
+  try {
+    let rows;
+    try { rows = await fetchJson("data/questions.json"); }
+    catch { const payload = await fetchJson("data/platform-data.json"); rows = payload.questions || payload.knowledge_nodes || payload.nodes || payload.items || payload.catalog || payload; }
+    if(!Array.isArray(rows)) rows = Object.values(rows).flat().filter(x => typeof x === "object");
+    state.catalog = rows.map(normalizeQuestion);
+  } catch(e) { console.warn("Using fallback catalog", e); state.catalog = fallbackCatalog.map(normalizeQuestion); }
+  hydrateFilters(); applyFilters(); restoreState(); updateAnalytics();
 }
-
-function renderOverview(data) {
-  title.textContent = 'Platform Overview';
-  const nodes = data.knowledgeNodes || [];
-  document.getElementById('nodeCount').textContent = `${nodes.length} knowledge nodes`;
-  panel.innerHTML = `
-    <div class="item"><strong>Available modules:</strong> ${nodes.length}</div>
-    <div class="item"><strong>JD analyses:</strong> ${(data.jdReadiness || []).length}</div>
-    <div class="item"><strong>Quality report:</strong> ${Object.keys(data.qualityReport || {}).length ? 'Available' : 'Not generated yet'}</div>
-    <div class="item"><strong>Next best action:</strong> Launch a practice session from the top matched JD skills, then review readiness gaps.</div>
-  `;
-}
-
-function renderInterview(data) {
-  title.textContent = 'Interview Simulator';
-  const nodes = (data.knowledgeNodes || []).slice(0, 10);
-  if (!nodes.length) {
-    panel.innerHTML = '<div class="item">No knowledge nodes found. Run the v4/v5 build scripts first.</div>';
-    return;
+function hydrateFilters(){
+  for(const [id, key] of [["domainFilter","domain"],["roleFilter","role"],["difficultyFilter","difficulty"]]){
+    const select = $(id); const old = select.value; select.innerHTML = `<option value="">${id==="domainFilter"?"All domains":id==="roleFilter"?"All roles":"All difficulty"}</option>`;
+    uniq(state.catalog.map(q=>q[key])).forEach(v => { const opt=document.createElement("option"); opt.value=v; opt.textContent=v; select.appendChild(opt); }); select.value = old;
   }
-  panel.innerHTML = nodes.map((n, i) => `
-    <div class="item">
-      <strong>Question ${i + 1}: ${esc(n.title || n.id || 'Practice node')}</strong>
-      <p>${esc(n.problem || n.summary || n.description || 'Explain the solution, risks, validation strategy, evidence, and production-readiness considerations.')}</p>
-      <span class="badge">${esc(n.domain || 'Domain')}</span>
-      <span class="badge">${esc(n.difficulty || 'Difficulty')}</span>
-      <span class="badge">${esc(n.role || 'Role')}</span>
-    </div>
-  `).join('');
 }
-
-function renderJD(data) {
-  title.textContent = 'JD Readiness Dashboard';
-  const analyses = data.jdReadiness || [];
-  if (!analyses.length) {
-    panel.innerHTML = '<div class="item">No JD analysis found. Run build_v4_jd_readiness_release.py first.</div>';
-    return;
-  }
-  panel.innerHTML = analyses.map(a => `
-    <div class="item">
-      <strong>${esc(a.job_title || a.jd_name || a.file || 'JD analysis')}</strong>
-      <p>Readiness score: <strong>${esc(a.readiness_score ?? a.score ?? '--')}</strong></p>
-      <p>${esc(a.summary || 'Review skill matches, gaps, and recommended practice modules.')}</p>
-      <div>${(a.required_skills || a.skills || []).slice(0, 18).map(s => `<span class="badge">${esc(s)}</span>`).join('')}</div>
-    </div>
-  `).join('');
+function applyFilters(){
+  const domain=$("domainFilter").value, role=$("roleFilter").value, difficulty=$("difficultyFilter").value, keyword=$("keywordFilter").value.trim().toLowerCase();
+  state.filtered = state.catalog.filter(q => (!domain || q.domain===domain) && (!role || q.role===role) && (!difficulty || q.difficulty===difficulty) && (!keyword || [q.id,q.title,q.problem,q.domain,q.role,q.difficulty,q.category,q.concept,q.model_answer].join(" ").toLowerCase().includes(keyword)));
+  $("filterSummary").textContent = `${state.filtered.length} matching questions. Start interview to create a focused session.`; updateAnalytics();
 }
-
-function renderQuality(data) {
-  title.textContent = 'Quality Intelligence';
-  const q = data.qualityReport || {};
-  panel.innerHTML = `<pre>${esc(JSON.stringify(q, null, 2).slice(0, 8000))}</pre>`;
+function shuffle(items){ const a=[...items]; for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+function startPractice(){
+  applyFilters(); const size=Math.max(1,Math.min(Number($("sessionSize").value||5),50)); const pool=$("shuffleToggle").checked ? shuffle(state.filtered) : [...state.filtered];
+  state.session=pool.slice(0,size); state.current=0; state.responses={}; state.startedAt=Date.now(); state.elapsedBase=0;
+  if(!state.session.length){ $("filterSummary").textContent="No questions match those filters. Broaden the filter settings."; return; }
+  startTimer(); renderQuestion(); saveState(false); toast("Interview session started");
 }
-
-fetch('data/platform-data.json')
-  .then(r => r.json())
-  .then(data => {
-    platformData = data;
-    const score = readinessScore(data);
-    document.getElementById('readinessScore').textContent = score == null ? '--' : score;
-    document.getElementById('readinessLabel').textContent = score == null ? 'Run readiness build' : score >= 80 ? 'Strong alignment' : score >= 60 ? 'Moderate alignment' : 'Needs targeted practice';
-    renderOverview(data);
-  })
-  .catch(err => {
-    panel.innerHTML = `<div class="item">Unable to load platform data: ${esc(err.message)}</div>`;
-  });
-
-document.getElementById('launchInterview').addEventListener('click', () => renderInterview(platformData));
-document.getElementById('showJD').addEventListener('click', () => renderJD(platformData));
-document.getElementById('showQuality').addEventListener('click', () => renderQuality(platformData));
+function getResponse(){ const q=state.session[state.current]; if(!q) return null; state.responses[q.id] ||= {notes:"", scores:{understanding:0, approach:0, risks:0, testing:0, evidence:0, communication:0}, revealed:[], review:false, completed:false, updatedAt:null}; return state.responses[q.id]; }
+function renderQuestion(){
+  const q=state.session[state.current]; $("emptyState").classList.toggle("hidden",!!q); $("questionCard").classList.toggle("hidden",!q); if(!q) return;
+  const r=getResponse(); $("progressPill").textContent=`Question ${state.current+1} of ${state.session.length}`; $("metaPill").textContent=`${q.domain} • ${q.role} • ${q.difficulty} • ${q.concept}`; $("questionTitle").textContent=`${q.id} — ${q.title}`; $("questionProblem").textContent=q.problem;
+  $("answerNotes").value=r.notes||""; document.querySelectorAll(".scoreInput").forEach(input=>input.value=r.scores[input.dataset.score]||0); $("supportPanel").classList.add("hidden"); $("supportPanel").textContent="";
+  updateScore(); updateAnalytics(); renderSessionList(); updateTimer();
+}
+function checklist(q){ return `Self-critique checklist\n\n1. Did I clarify scope, assumptions, inputs, outputs, and business risk?\n2. Did I describe an implementable approach, not just testing activities?\n3. Did I cover edge cases, failure modes, compliance/security concerns, and data quality risks?\n4. Did I explain automation, CI/CD quality gates, observability, and evidence?\n5. Did I present a production-readiness decision and residual risks?\n\nTarget answer style for this question: ${q.domain} / ${q.role} / ${q.difficulty} / ${q.concept}.`; }
+function showSupport(type){
+  const q=state.session[state.current], r=getResponse(); if(!q) return; let text="";
+  if(type==="hint1") text=`Hint 1\n\n${q.hint1}`; if(type==="hint2") text=`Hint 2\n\n${q.hint2}`; if(type==="answer") text=`Model answer\n\n${q.model_answer}`; if(type==="followups") text=`Follow-up questions\n\n${q.followups.map((x,i)=>`${i+1}. ${x}`).join("\n")}`; if(type==="critique") text=checklist(q);
+  r.revealed=[...new Set([...(r.revealed||[]),type])]; $("supportPanel").textContent=text; $("supportPanel").classList.remove("hidden"); saveState(false);
+}
+function updateCurrentResponse(){ const r=getResponse(); if(!r) return; r.notes=$("answerNotes").value; document.querySelectorAll(".scoreInput").forEach(input=>{ const key=input.dataset.score; const max=limits[key]||100; r.scores[key]=Math.max(0,Math.min(Number(input.value||0),max)); input.value=r.scores[key]; }); r.completed=Boolean((r.notes||"").trim()) || scoreTotal(r)>0; r.updatedAt=new Date().toISOString(); updateScore(); updateAnalytics(); saveState(false); }
+function scoreTotal(r){ return Object.values(r?.scores||{}).reduce((a,b)=>a+Number(b||0),0); }
+function updateScore(){ $("totalScore").textContent=scoreTotal(getResponse()); }
+function goTo(i){ updateCurrentResponse(); if(i>=0 && i<state.session.length){ state.current=i; renderQuestion(); } }
+function next(){ goTo(state.current+1); }
+function prev(){ goTo(state.current-1); }
+function answeredCount(){ return Object.values(state.responses).filter(r=>r.completed || (r.notes||"").trim() || scoreTotal(r)>0).length; }
+function averageScore(){ const vals=Object.values(state.responses).filter(r=>scoreTotal(r)>0).map(scoreTotal); return vals.length?Math.round(vals.reduce((a,b)=>a+b,0)/vals.length):0; }
+function readinessLabel(avg){ if(!avg) return "Not started"; if(avg>=90) return "Interview ready"; if(avg>=75) return "Strong"; if(avg>=60) return "Developing"; return "Needs practice"; }
+function updateAnalytics(){ $("catalogCount").textContent=state.catalog.length; $("filteredCount").textContent=state.filtered.length; $("answeredCount").textContent=answeredCount(); const avg=averageScore(); $("averageScore").textContent=avg; $("readinessScore").textContent=readinessLabel(avg); const pct=state.session.length?Math.round((answeredCount()/state.session.length)*100):0; $("progressBar").style.width=`${Math.min(pct,100)}%`; }
+function renderSessionList(){ const ol=$("sessionList"); ol.innerHTML=""; state.session.forEach((q,i)=>{ const r=state.responses[q.id]||{}; const li=document.createElement("li"); li.textContent=`${i+1}. ${q.concept || q.title} ${scoreTotal(r)?`(${scoreTotal(r)})`:""}`; li.className=`${i===state.current?"active ":""}${r.review?"review":""}`; li.addEventListener("click",()=>goTo(i)); ol.appendChild(li); }); }
+function saveState(show=false){ localStorage.setItem(STORE_KEY, JSON.stringify({session:state.session,current:state.current,responses:state.responses,startedAt:state.startedAt,elapsedBase:elapsedMs(),filters:{domain:$("domainFilter").value,role:$("roleFilter").value,difficulty:$("difficultyFilter").value,keyword:$("keywordFilter").value,size:$("sessionSize").value,shuffle:$("shuffleToggle").checked}})); if(show) toast("Progress saved locally"); }
+function restoreState(){ try{ const saved=JSON.parse(localStorage.getItem(STORE_KEY)||"null"); if(!saved) return; if(saved.filters){ $("domainFilter").value=saved.filters.domain||""; $("roleFilter").value=saved.filters.role||""; $("difficultyFilter").value=saved.filters.difficulty||""; $("keywordFilter").value=saved.filters.keyword||""; $("sessionSize").value=saved.filters.size||5; $("shuffleToggle").checked=saved.filters.shuffle!==false; applyFilters(); } state.session=saved.session||[]; state.current=saved.current||0; state.responses=saved.responses||{}; state.elapsedBase=saved.elapsedBase||0; state.startedAt=state.session.length?Date.now():null; if(state.session.length){ startTimer(); renderQuestion(); toast("Saved interview restored"); } }catch(e){ console.warn("Could not restore state",e); } }
+function resetProgress(){ if(!confirm("Reset saved interview progress in this browser?")) return; localStorage.removeItem(STORE_KEY); state.session=[]; state.current=0; state.responses={}; state.startedAt=null; state.elapsedBase=0; stopTimer(); renderQuestion(); updateAnalytics(); renderSessionList(); $("summaryPanel").classList.add("hidden"); toast("Saved progress reset"); }
+function elapsedMs(){ return state.elapsedBase + (state.startedAt ? Date.now()-state.startedAt : 0); }
+function fmt(ms){ const s=Math.floor(ms/1000); return `${String(Math.floor(s/60)).padStart(2,"0")}:${String(s%60).padStart(2,"0")}`; }
+function updateTimer(){ $("timerPill").textContent=fmt(elapsedMs()); }
+function startTimer(){ stopTimer(); state.timer=setInterval(updateTimer,1000); }
+function stopTimer(){ if(state.timer) clearInterval(state.timer); state.timer=null; }
+function markReview(){ const r=getResponse(); if(!r) return; r.review=!r.review; saveState(false); renderSessionList(); toast(r.review?"Marked for review":"Removed review mark"); }
+function completeSession(){ updateCurrentResponse(); const avg=averageScore(); const review=Object.entries(state.responses).filter(([_,r])=>r.review).length; $("summaryPanel").innerHTML=`<h3>Session summary</h3><p><strong>${answeredCount()}</strong> of <strong>${state.session.length}</strong> answered. Average score: <strong>${avg}/100</strong>. Readiness: <strong>${readinessLabel(avg)}</strong>. Marked for review: <strong>${review}</strong>.</p><p>Export the Markdown summary and use it as evidence of practice or paste it into ChatGPT for deeper coaching.</p>`; $("summaryPanel").classList.remove("hidden"); toast("Session completed"); }
+function markdown(){ updateCurrentResponse(); const lines=["# Enterprise QE Academy v5 Interview Session", "", `Exported: ${new Date().toISOString()}`, `Elapsed: ${fmt(elapsedMs())}`, `Answered: ${answeredCount()} / ${state.session.length}`, `Average score: ${averageScore()}/100`, `Readiness: ${readinessLabel(averageScore())}`, ""]; state.session.forEach((q,i)=>{ const r=state.responses[q.id]||{}; lines.push(`## ${i+1}. ${q.id} — ${q.title}`, "", `- Domain: ${q.domain}`, `- Role: ${q.role}`, `- Difficulty: ${q.difficulty}`, `- Concept: ${q.concept}`, `- Score: ${scoreTotal(r)}/100`, `- Marked for review: ${r.review?"Yes":"No"}`, "", "### Problem", q.problem, "", "### My Answer", r.notes || "_No answer captured._", "", "### Follow-up Questions", ...q.followups.map(x=>`- ${x}`), "", "### Model Answer", q.model_answer, ""); }); return lines.join("\n"); }
+function exportSession(){ const blob=new Blob([markdown()],{type:"text/markdown"}); const url=URL.createObjectURL(blob); const a=document.createElement("a"); a.href=url; a.download="enterprise_qe_v5_interview_session.md"; a.click(); URL.revokeObjectURL(url); }
+async function copyPrompt(){ const q=state.session[state.current]; if(!q){ toast("Start a session first"); return; } const prompt=`Act as my Enterprise Quality Engineering interviewer. Ask me this question, wait for my answer, challenge gaps, score me using a 100-point rubric, then ask follow-ups.\n\nQuestion: ${q.title}\nDomain: ${q.domain}\nRole: ${q.role}\nDifficulty: ${q.difficulty}\nProblem: ${q.problem}\nFollow-ups: ${q.followups.join("; ")}`; await navigator.clipboard.writeText(prompt); toast("ChatGPT interviewer prompt copied"); }
+function bind(){ ["domainFilter","roleFilter","difficultyFilter","keywordFilter","sessionSize","shuffleToggle"].forEach(id=>$(id).addEventListener("change",applyFilters)); $("keywordFilter").addEventListener("keyup",applyFilters); $("applyFiltersBtn").addEventListener("click",applyFilters); $("startPracticeBtn").addEventListener("click",startPractice); $("resumeBtn").addEventListener("click",restoreState); $("hint1Btn").addEventListener("click",()=>showSupport("hint1")); $("hint2Btn").addEventListener("click",()=>showSupport("hint2")); $("answerBtn").addEventListener("click",()=>showSupport("answer")); $("followupsBtn").addEventListener("click",()=>showSupport("followups")); $("critiqueBtn").addEventListener("click",()=>showSupport("critique")); $("answerNotes").addEventListener("input",updateCurrentResponse); document.querySelectorAll(".scoreInput").forEach(i=>i.addEventListener("input",updateCurrentResponse)); $("nextBtn").addEventListener("click",next); $("prevBtn").addEventListener("click",prev); $("saveBtn").addEventListener("click",()=>saveState(true)); $("resetProgressBtn").addEventListener("click",resetProgress); $("exportSessionBtn").addEventListener("click",exportSession); $("markReviewBtn").addEventListener("click",markReview); $("completeBtn").addEventListener("click",completeSession); $("copyPromptBtn").addEventListener("click",copyPrompt); }
+bind(); loadCatalog();
