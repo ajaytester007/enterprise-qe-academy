@@ -1,0 +1,1805 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>v4 Content Factory - Enterprise QE Academy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#v4-content-factory" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Enterprise QE Academy" class="md-header__button md-logo" aria-label="Enterprise QE Academy" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Enterprise QE Academy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              v4 Content Factory
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Enterprise QE Academy" class="md-nav__button md-logo" aria-label="Enterprise QE Academy" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Enterprise QE Academy
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../search-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Search Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../java/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQL & Data Validation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practice Engine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Online IDE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../automation/selenium/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automation
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Automation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/playwright/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Playwright
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../automation/cypress/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cypress
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data-quality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Quality & ETL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../domains/banking/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domains
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Domains
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../domains/healthcare/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Healthcare Payer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../domains/retail-supply-chain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Retail & Supply Chain
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloud-devops/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cloud & DevOps
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ai-qe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI QE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whiteboarding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Whiteboarding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../solutions/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solutions
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Solutions
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../catalog/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Catalog
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_16" id="__nav_16_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Catalog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../catalog/by-category/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    By Category
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../catalog/by-domain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    By Domain
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../catalog/by-difficulty/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    By Difficulty
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../catalog/by-role/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    By Role
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#category-coverage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category coverage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-enriched-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sample enriched content
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sample enriched content">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sec-00843-pii-for-banking-observability-and-production-readiness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SEC-00843 — PII for Banking observability and production readiness
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SEC-00843 — PII for Banking observability and production readiness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-answer-excerpt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model answer excerpt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etl-01085-cdc-validation-for-banking-cloud-migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ETL-01085 — CDC validation for Banking cloud migration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ETL-01085 — CDC validation for Banking cloud migration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-answer-excerpt_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model answer excerpt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whi-02735-test-strategy-for-banking-high-volume-transaction-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WHI-02735 — Test strategy for Banking high-volume transaction validation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WHI-02735 — Test strategy for Banking high-volume transaction validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-answer-excerpt_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model answer excerpt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hea-03431-mmis-for-banking-cicd-quality-gate-adoption" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HEA-03431 — MMIS for Banking CI/CD quality gate adoption
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HEA-03431 — MMIS for Banking CI/CD quality gate adoption">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-answer-excerpt_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model answer excerpt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_-03463-playwright-for-banking-regulatory-reporting-modernization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UI_-03463 — Playwright for Banking regulatory reporting modernization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UI_-03463 — Playwright for Banking regulatory reporting modernization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-answer-excerpt_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model answer excerpt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sec-03525-hipaa-for-banking-cloud-migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SEC-03525 — HIPAA for Banking cloud migration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SEC-03525 — HIPAA for Banking cloud migration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-answer-excerpt_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model answer excerpt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sec-03867-pii-for-banking-data-governance-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SEC-03867 — PII for Banking data governance program
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SEC-03867 — PII for Banking data governance program">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-answer-excerpt_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model answer excerpt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fra-03878-reporting-for-banking-data-platform-migration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FRA-03878 — Reporting for Banking data platform migration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FRA-03878 — Reporting for Banking data platform migration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-answer-excerpt_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model answer excerpt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jav-03925-hashset-for-banking-test-automation-modernization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JAV-03925 — HashSet for Banking test automation modernization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JAV-03925 — HashSet for Banking test automation modernization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-answer-excerpt_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model answer excerpt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql-04900-joins-for-banking-enterprise-modernization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQL-04900 — Joins for Banking enterprise modernization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SQL-04900 — Joins for Banking enterprise modernization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-answer-excerpt_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model answer excerpt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagram_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="v4-content-factory">v4 Content Factory</h1>
+<p>The Content Factory enriches catalog questions with stronger model answers, validation strategy, evidence expectations, coding prompts, whiteboard prompts, and Mermaid diagrams.</p>
+<h2 id="summary">Summary</h2>
+<ul>
+<li>Enriched items: <strong>28</strong></li>
+<li>Average quality score: <strong>100.0/100</strong></li>
+<li>Selected rows: <strong>28</strong></li>
+</ul>
+<h2 id="category-coverage">Category coverage</h2>
+<ul>
+<li><strong>CI_CD_DEVOPS</strong>: 1</li>
+<li><strong>DATA_ENGINEERING</strong>: 4</li>
+<li><strong>FRAMEWORK_ARCHITECTURE</strong>: 2</li>
+<li><strong>HEALTHCARE_PAYER</strong>: 1</li>
+<li><strong>JAVA_STRINGS</strong>: 6</li>
+<li><strong>PERFORMANCE_RELIABILITY</strong>: 2</li>
+<li><strong>RETAIL_SUPPLY_CHAIN</strong>: 3</li>
+<li><strong>SECURITY_PRIVACY</strong>: 5</li>
+<li><strong>UI_AUTOMATION</strong>: 3</li>
+<li><strong>WHITEBOARD_ARCHITECTURE</strong>: 1</li>
+</ul>
+<h2 id="sample-enriched-content">Sample enriched content</h2>
+<h3 id="sec-00843-pii-for-banking-observability-and-production-readiness">SEC-00843 — PII for Banking observability and production readiness</h3>
+<ul>
+<li>Domain: Banking</li>
+<li>Role: Lead Quality Engineer</li>
+<li>Difficulty: Hard</li>
+<li>Quality score: 100/100</li>
+</ul>
+<p>Explain and defend a production-ready PII strategy for Banking as a Lead Quality Engineer.</p>
+<h4 id="model-answer-excerpt">Model answer excerpt</h4>
+<p>I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for PII in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.</p>
+<p>My solution would focus on data protection, least privilege, auditability, masking, encryption, retention, consent, and regulatory evidence. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.</p>
+<p>For production readiness, I would require clear pass/fail gates, defect tr...</p>
+<h4 id="diagram">Diagram</h4>
+<pre><code class="language-mermaid">flowchart TD
+  A[Requirement: PII] --&gt; B[Risk analysis]
+  B --&gt; C[Test design]
+  C --&gt; D[Automation]
+  D --&gt; E[CI/CD quality gate]
+  E --&gt; F[Banking release evidence]
+  F --&gt; G[Production readiness]
+</code></pre>
+<h3 id="etl-01085-cdc-validation-for-banking-cloud-migration">ETL-01085 — CDC validation for Banking cloud migration</h3>
+<ul>
+<li>Domain: Banking</li>
+<li>Role: Lead Quality Engineer</li>
+<li>Difficulty: Hard</li>
+<li>Quality score: 100/100</li>
+</ul>
+<p>Explain and defend a production-ready CDC validation strategy for Banking as a Lead Quality Engineer.</p>
+<h4 id="model-answer-excerpt_1">Model answer excerpt</h4>
+<p>I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for CDC validation in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.</p>
+<p>My solution would focus on source-to-target validation, reconciliation, schema drift, data quality rules, lineage, and recoverability. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.</p>
+<p>For production readiness, I would require clear pass/fail gates, defe...</p>
+<h4 id="diagram_1">Diagram</h4>
+<pre><code class="language-mermaid">flowchart LR
+  A[Source systems] --&gt; B[Ingestion]
+  B --&gt; C[Validation rules]
+  C --&gt; D[Curated data]
+  C --&gt; E[Exception queue]
+  D --&gt; F[Analytics / downstream APIs]
+  C --&gt; G[Quality evidence]
+</code></pre>
+<h3 id="whi-02735-test-strategy-for-banking-high-volume-transaction-validation">WHI-02735 — Test strategy for Banking high-volume transaction validation</h3>
+<ul>
+<li>Domain: Banking</li>
+<li>Role: Lead Quality Engineer</li>
+<li>Difficulty: Hard</li>
+<li>Quality score: 100/100</li>
+</ul>
+<p>Explain and defend a production-ready Test strategy strategy for Banking as a Lead Quality Engineer.</p>
+<h4 id="model-answer-excerpt_2">Model answer excerpt</h4>
+<p>I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for Test strategy in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.</p>
+<p>My solution would focus on requirements clarity, risk-based testing, automation design, observability, evidence, and production readiness. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.</p>
+<p>For production readiness, I would require clear pass/fail gates, d...</p>
+<h4 id="diagram_2">Diagram</h4>
+<pre><code class="language-mermaid">flowchart TD
+  A[Requirement: Test strategy] --&gt; B[Risk analysis]
+  B --&gt; C[Test design]
+  C --&gt; D[Automation]
+  D --&gt; E[CI/CD quality gate]
+  E --&gt; F[Banking release evidence]
+  F --&gt; G[Production readiness]
+</code></pre>
+<h3 id="hea-03431-mmis-for-banking-cicd-quality-gate-adoption">HEA-03431 — MMIS for Banking CI/CD quality gate adoption</h3>
+<ul>
+<li>Domain: Banking</li>
+<li>Role: Lead Quality Engineer</li>
+<li>Difficulty: Hard</li>
+<li>Quality score: 100/100</li>
+</ul>
+<p>Explain and defend a production-ready MMIS strategy for Banking as a Lead Quality Engineer.</p>
+<h4 id="model-answer-excerpt_3">Model answer excerpt</h4>
+<p>I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for MMIS in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.</p>
+<p>My solution would focus on requirements clarity, risk-based testing, automation design, observability, evidence, and production readiness. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.</p>
+<p>For production readiness, I would require clear pass/fail gates, defect tri...</p>
+<h4 id="diagram_3">Diagram</h4>
+<pre><code class="language-mermaid">flowchart TD
+  A[Requirement: MMIS] --&gt; B[Risk analysis]
+  B --&gt; C[Test design]
+  C --&gt; D[Automation]
+  D --&gt; E[CI/CD quality gate]
+  E --&gt; F[Banking release evidence]
+  F --&gt; G[Production readiness]
+</code></pre>
+<h3 id="ui_-03463-playwright-for-banking-regulatory-reporting-modernization">UI_-03463 — Playwright for Banking regulatory reporting modernization</h3>
+<ul>
+<li>Domain: Banking</li>
+<li>Role: Lead Quality Engineer</li>
+<li>Difficulty: Hard</li>
+<li>Quality score: 100/100</li>
+</ul>
+<p>Explain and defend a production-ready Playwright strategy for Banking as a Lead Quality Engineer.</p>
+<h4 id="model-answer-excerpt_4">Model answer excerpt</h4>
+<p>I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for Playwright in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.</p>
+<p>My solution would focus on requirements clarity, risk-based testing, automation design, observability, evidence, and production readiness. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.</p>
+<p>For production readiness, I would require clear pass/fail gates, defe...</p>
+<h4 id="diagram_4">Diagram</h4>
+<pre><code class="language-mermaid">flowchart TD
+  A[Requirement: Playwright] --&gt; B[Risk analysis]
+  B --&gt; C[Test design]
+  C --&gt; D[Automation]
+  D --&gt; E[CI/CD quality gate]
+  E --&gt; F[Banking release evidence]
+  F --&gt; G[Production readiness]
+</code></pre>
+<h3 id="sec-03525-hipaa-for-banking-cloud-migration">SEC-03525 — HIPAA for Banking cloud migration</h3>
+<ul>
+<li>Domain: Banking</li>
+<li>Role: Lead Quality Engineer</li>
+<li>Difficulty: Hard</li>
+<li>Quality score: 100/100</li>
+</ul>
+<p>Explain and defend a production-ready HIPAA strategy for Banking as a Lead Quality Engineer.</p>
+<h4 id="model-answer-excerpt_5">Model answer excerpt</h4>
+<p>I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for HIPAA in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.</p>
+<p>My solution would focus on data protection, least privilege, auditability, masking, encryption, retention, consent, and regulatory evidence. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.</p>
+<p>For production readiness, I would require clear pass/fail gates, defect ...</p>
+<h4 id="diagram_5">Diagram</h4>
+<pre><code class="language-mermaid">flowchart TD
+  A[Requirement: HIPAA] --&gt; B[Risk analysis]
+  B --&gt; C[Test design]
+  C --&gt; D[Automation]
+  D --&gt; E[CI/CD quality gate]
+  E --&gt; F[Banking release evidence]
+  F --&gt; G[Production readiness]
+</code></pre>
+<h3 id="sec-03867-pii-for-banking-data-governance-program">SEC-03867 — PII for Banking data governance program</h3>
+<ul>
+<li>Domain: Banking</li>
+<li>Role: Lead Quality Engineer</li>
+<li>Difficulty: Hard</li>
+<li>Quality score: 100/100</li>
+</ul>
+<p>Explain and defend a production-ready PII strategy for Banking as a Lead Quality Engineer.</p>
+<h4 id="model-answer-excerpt_6">Model answer excerpt</h4>
+<p>I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for PII in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.</p>
+<p>My solution would focus on data protection, least privilege, auditability, masking, encryption, retention, consent, and regulatory evidence. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.</p>
+<p>For production readiness, I would require clear pass/fail gates, defect tr...</p>
+<h4 id="diagram_6">Diagram</h4>
+<pre><code class="language-mermaid">flowchart TD
+  A[Requirement: PII] --&gt; B[Risk analysis]
+  B --&gt; C[Test design]
+  C --&gt; D[Automation]
+  D --&gt; E[CI/CD quality gate]
+  E --&gt; F[Banking release evidence]
+  F --&gt; G[Production readiness]
+</code></pre>
+<h3 id="fra-03878-reporting-for-banking-data-platform-migration">FRA-03878 — Reporting for Banking data platform migration</h3>
+<ul>
+<li>Domain: Banking</li>
+<li>Role: Lead Quality Engineer</li>
+<li>Difficulty: Hard</li>
+<li>Quality score: 100/100</li>
+</ul>
+<p>Explain and defend a production-ready Reporting strategy for Banking as a Lead Quality Engineer.</p>
+<h4 id="model-answer-excerpt_7">Model answer excerpt</h4>
+<p>I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for Reporting in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.</p>
+<p>My solution would focus on requirements clarity, risk-based testing, automation design, observability, evidence, and production readiness. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.</p>
+<p>For production readiness, I would require clear pass/fail gates, defec...</p>
+<h4 id="diagram_7">Diagram</h4>
+<pre><code class="language-mermaid">flowchart TD
+  A[Requirement: Reporting] --&gt; B[Risk analysis]
+  B --&gt; C[Test design]
+  C --&gt; D[Automation]
+  D --&gt; E[CI/CD quality gate]
+  E --&gt; F[Banking release evidence]
+  F --&gt; G[Production readiness]
+</code></pre>
+<h3 id="jav-03925-hashset-for-banking-test-automation-modernization">JAV-03925 — HashSet for Banking test automation modernization</h3>
+<ul>
+<li>Domain: Banking</li>
+<li>Role: Lead Quality Engineer</li>
+<li>Difficulty: Hard</li>
+<li>Quality score: 100/100</li>
+</ul>
+<p>Explain and defend a production-ready HashSet strategy for Banking as a Lead Quality Engineer.</p>
+<h4 id="model-answer-excerpt_8">Model answer excerpt</h4>
+<p>I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for HashSet in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.</p>
+<p>My solution would focus on input normalization, null safety, encoding, validation rules, boundary tests, internationalization, and maintainable utilities. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.</p>
+<p>For production readiness, I would require clear pass/fai...</p>
+<h4 id="diagram_8">Diagram</h4>
+<pre><code class="language-mermaid">flowchart TD
+  A[Requirement: HashSet] --&gt; B[Risk analysis]
+  B --&gt; C[Test design]
+  C --&gt; D[Automation]
+  D --&gt; E[CI/CD quality gate]
+  E --&gt; F[Banking release evidence]
+  F --&gt; G[Production readiness]
+</code></pre>
+<h3 id="sql-04900-joins-for-banking-enterprise-modernization">SQL-04900 — Joins for Banking enterprise modernization</h3>
+<ul>
+<li>Domain: Banking</li>
+<li>Role: Lead Quality Engineer</li>
+<li>Difficulty: Hard</li>
+<li>Quality score: 100/100</li>
+</ul>
+<p>Explain and defend a production-ready Joins strategy for Banking as a Lead Quality Engineer.</p>
+<h4 id="model-answer-excerpt_9">Model answer excerpt</h4>
+<p>I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for Joins in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.</p>
+<p>My solution would focus on source-to-target validation, reconciliation, schema drift, data quality rules, lineage, and recoverability. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.</p>
+<p>For production readiness, I would require clear pass/fail gates, defect triage...</p>
+<h4 id="diagram_9">Diagram</h4>
+<pre><code class="language-mermaid">flowchart LR
+  A[Source systems] --&gt; B[Ingestion]
+  B --&gt; C[Validation rules]
+  C --&gt; D[Curated data]
+  C --&gt; E[Exception queue]
+  D --&gt; F[Analytics / downstream APIs]
+  C --&gt; G[Quality evidence]
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
