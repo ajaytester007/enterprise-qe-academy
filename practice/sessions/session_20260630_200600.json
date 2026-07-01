@@ -1,0 +1,156 @@
+{
+  "session_id": "session_20260630_200600",
+  "created_at": "2026-06-30T20:06:00",
+  "filters": {
+    "count": 5,
+    "category": null,
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "keyword": null,
+    "mode": "solutions",
+    "seed": 2026
+  },
+  "questions": [
+    {
+      "id": "HEA-03431",
+      "title": "MMIS for Banking CI/CD quality gate adoption",
+      "difficulty": "Hard",
+      "category": "HEALTHCARE_PAYER",
+      "concept": "MMIS",
+      "domain": "Banking",
+      "role": "Lead Quality Engineer",
+      "context": "CI/CD quality gate adoption",
+      "problem_statement": "Design, implement, test, or whiteboard a hard solution involving MMIS for Banking CI/CD quality gate adoption. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.",
+      "solution_outline": [
+        "Clarify expected input/output and business meaning.",
+        "Identify failure modes and data/automation risks.",
+        "Propose a simple baseline approach.",
+        "Optimize for deterministic behavior, maintainability, and observability.",
+        "Add unit/API/SQL/UI tests depending on the skill category.",
+        "Capture terminal or CI evidence.",
+        "Explain time/space complexity or operational complexity.",
+        "Map the concept to an enterprise project scenario."
+      ],
+      "tags": [
+        "healthcare-payer",
+        "mmis",
+        "banking",
+        "lead-quality-engineer",
+        "hard"
+      ]
+    },
+    {
+      "id": "JAV-05024",
+      "title": "Regex validation for Banking CI/CD quality gate adoption",
+      "difficulty": "Hard",
+      "category": "JAVA_STRINGS",
+      "concept": "Regex validation",
+      "domain": "Banking",
+      "role": "Lead Quality Engineer",
+      "context": "CI/CD quality gate adoption",
+      "problem_statement": "Design, implement, test, or whiteboard a hard solution involving Regex validation for Banking CI/CD quality gate adoption. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.",
+      "solution_outline": [
+        "Clarify expected input/output and business meaning.",
+        "Identify failure modes and data/automation risks.",
+        "Propose a simple baseline approach.",
+        "Optimize for deterministic behavior, maintainability, and observability.",
+        "Add unit/API/SQL/UI tests depending on the skill category.",
+        "Capture terminal or CI evidence.",
+        "Explain time/space complexity or operational complexity.",
+        "Map the concept to an enterprise project scenario."
+      ],
+      "tags": [
+        "java-strings",
+        "regex-validation",
+        "banking",
+        "lead-quality-engineer",
+        "hard"
+      ]
+    },
+    {
+      "id": "RET-07122",
+      "title": "Inventory for Banking CI/CD quality gate adoption",
+      "difficulty": "Hard",
+      "category": "RETAIL_SUPPLY_CHAIN",
+      "concept": "Inventory",
+      "domain": "Banking",
+      "role": "Lead Quality Engineer",
+      "context": "CI/CD quality gate adoption",
+      "problem_statement": "Design, implement, test, or whiteboard a hard solution involving Inventory for Banking CI/CD quality gate adoption. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.",
+      "solution_outline": [
+        "Clarify expected input/output and business meaning.",
+        "Identify failure modes and data/automation risks.",
+        "Propose a simple baseline approach.",
+        "Optimize for deterministic behavior, maintainability, and observability.",
+        "Add unit/API/SQL/UI tests depending on the skill category.",
+        "Capture terminal or CI evidence.",
+        "Explain time/space complexity or operational complexity.",
+        "Map the concept to an enterprise project scenario."
+      ],
+      "tags": [
+        "retail-supply-chain",
+        "inventory",
+        "banking",
+        "lead-quality-engineer",
+        "hard"
+      ]
+    },
+    {
+      "id": "SQL-08230",
+      "title": "Group By for Banking cloud migration",
+      "difficulty": "Hard",
+      "category": "SQL_DATA_VALIDATION",
+      "concept": "Group By",
+      "domain": "Banking",
+      "role": "Lead Quality Engineer",
+      "context": "cloud migration",
+      "problem_statement": "Design, implement, test, or whiteboard a hard solution involving Group By for Banking cloud migration. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.",
+      "solution_outline": [
+        "Clarify expected input/output and business meaning.",
+        "Identify failure modes and data/automation risks.",
+        "Propose a simple baseline approach.",
+        "Optimize for deterministic behavior, maintainability, and observability.",
+        "Add unit/API/SQL/UI tests depending on the skill category.",
+        "Capture terminal or CI evidence.",
+        "Explain time/space complexity or operational complexity.",
+        "Map the concept to an enterprise project scenario."
+      ],
+      "tags": [
+        "sql-data-validation",
+        "group-by",
+        "banking",
+        "lead-quality-engineer",
+        "hard"
+      ]
+    },
+    {
+      "id": "UI_-09475",
+      "title": "POM for Banking API-first transformation",
+      "difficulty": "Hard",
+      "category": "UI_AUTOMATION",
+      "concept": "POM",
+      "domain": "Banking",
+      "role": "Lead Quality Engineer",
+      "context": "API-first transformation",
+      "problem_statement": "Design, implement, test, or whiteboard a hard solution involving POM for Banking API-first transformation. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.",
+      "solution_outline": [
+        "Clarify expected input/output and business meaning.",
+        "Identify failure modes and data/automation risks.",
+        "Propose a simple baseline approach.",
+        "Optimize for deterministic behavior, maintainability, and observability.",
+        "Add unit/API/SQL/UI tests depending on the skill category.",
+        "Capture terminal or CI evidence.",
+        "Explain time/space complexity or operational complexity.",
+        "Map the concept to an enterprise project scenario."
+      ],
+      "tags": [
+        "ui-automation",
+        "pom",
+        "banking",
+        "lead-quality-engineer",
+        "hard"
+      ]
+    }
+  ]
+}

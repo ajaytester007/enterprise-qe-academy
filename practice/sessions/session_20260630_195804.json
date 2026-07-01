@@ -1,0 +1,296 @@
+{
+  "session_id": "session_20260630_195804",
+  "created_at": "2026-06-30T19:58:04",
+  "filters": {
+    "count": 10,
+    "category": null,
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "keyword": null,
+    "mode": "hints",
+    "seed": 2026
+  },
+  "questions": [
+    {
+      "id": "HEA-03431",
+      "title": "MMIS for Banking CI/CD quality gate adoption",
+      "difficulty": "Hard",
+      "category": "HEALTHCARE_PAYER",
+      "concept": "MMIS",
+      "domain": "Banking",
+      "role": "Lead Quality Engineer",
+      "context": "CI/CD quality gate adoption",
+      "problem_statement": "Design, implement, test, or whiteboard a hard solution involving MMIS for Banking CI/CD quality gate adoption. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.",
+      "solution_outline": [
+        "Clarify expected input/output and business meaning.",
+        "Identify failure modes and data/automation risks.",
+        "Propose a simple baseline approach.",
+        "Optimize for deterministic behavior, maintainability, and observability.",
+        "Add unit/API/SQL/UI tests depending on the skill category.",
+        "Capture terminal or CI evidence.",
+        "Explain time/space complexity or operational complexity.",
+        "Map the concept to an enterprise project scenario."
+      ],
+      "tags": [
+        "healthcare-payer",
+        "mmis",
+        "banking",
+        "lead-quality-engineer",
+        "hard"
+      ]
+    },
+    {
+      "id": "JAV-05024",
+      "title": "Regex validation for Banking CI/CD quality gate adoption",
+      "difficulty": "Hard",
+      "category": "JAVA_STRINGS",
+      "concept": "Regex validation",
+      "domain": "Banking",
+      "role": "Lead Quality Engineer",
+      "context": "CI/CD quality gate adoption",
+      "problem_statement": "Design, implement, test, or whiteboard a hard solution involving Regex validation for Banking CI/CD quality gate adoption. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.",
+      "solution_outline": [
+        "Clarify expected input/output and business meaning.",
+        "Identify failure modes and data/automation risks.",
+        "Propose a simple baseline approach.",
+        "Optimize for deterministic behavior, maintainability, and observability.",
+        "Add unit/API/SQL/UI tests depending on the skill category.",
+        "Capture terminal or CI evidence.",
+        "Explain time/space complexity or operational complexity.",
+        "Map the concept to an enterprise project scenario."
+      ],
+      "tags": [
+        "java-strings",
+        "regex-validation",
+        "banking",
+        "lead-quality-engineer",
+        "hard"
+      ]
+    },
+    {
+      "id": "RET-07122",
+      "title": "Inventory for Banking CI/CD quality gate adoption",
+      "difficulty": "Hard",
+      "category": "RETAIL_SUPPLY_CHAIN",
+      "concept": "Inventory",
+      "domain": "Banking",
+      "role": "Lead Quality Engineer",
+      "context": "CI/CD quality gate adoption",
+      "problem_statement": "Design, implement, test, or whiteboard a hard solution involving Inventory for Banking CI/CD quality gate adoption. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.",
+      "solution_outline": [
+        "Clarify expected input/output and business meaning.",
+        "Identify failure modes and data/automation risks.",
+        "Propose a simple baseline approach.",
+        "Optimize for deterministic behavior, maintainability, and observability.",
+        "Add unit/API/SQL/UI tests depending on the skill category.",
+        "Capture terminal or CI evidence.",
+        "Explain time/space complexity or operational complexity.",
+        "Map the concept to an enterprise project scenario."
+      ],
+      "tags": [
+        "retail-supply-chain",
+        "inventory",
+        "banking",
+        "lead-quality-engineer",
+        "hard"
+      ]
+    },
+    {
+      "id": "FRA-08990",
+      "title": "Reporting for Banking observability and production readiness",
+      "difficulty": "Hard",
+      "category": "FRAMEWORK_ARCHITECTURE",
+      "concept": "Reporting",
+      "domain": "Banking",
+      "role": "Lead Quality Engineer",
+      "context": "observability and production readiness",
+      "problem_statement": "Design, implement, test, or whiteboard a hard solution involving Reporting for Banking observability and production readiness. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.",
+      "solution_outline": [
+        "Clarify expected input/output and business meaning.",
+        "Identify failure modes and data/automation risks.",
+        "Propose a simple baseline approach.",
+        "Optimize for deterministic behavior, maintainability, and observability.",
+        "Add unit/API/SQL/UI tests depending on the skill category.",
+        "Capture terminal or CI evidence.",
+        "Explain time/space complexity or operational complexity.",
+        "Map the concept to an enterprise project scenario."
+      ],
+      "tags": [
+        "framework-architecture",
+        "reporting",
+        "banking",
+        "lead-quality-engineer",
+        "hard"
+      ]
+    },
+    {
+      "id": "SQL-08230",
+      "title": "Group By for Banking cloud migration",
+      "difficulty": "Hard",
+      "category": "SQL_DATA_VALIDATION",
+      "concept": "Group By",
+      "domain": "Banking",
+      "role": "Lead Quality Engineer",
+      "context": "cloud migration",
+      "problem_statement": "Design, implement, test, or whiteboard a hard solution involving Group By for Banking cloud migration. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.",
+      "solution_outline": [
+        "Clarify expected input/output and business meaning.",
+        "Identify failure modes and data/automation risks.",
+        "Propose a simple baseline approach.",
+        "Optimize for deterministic behavior, maintainability, and observability.",
+        "Add unit/API/SQL/UI tests depending on the skill category.",
+        "Capture terminal or CI evidence.",
+        "Explain time/space complexity or operational complexity.",
+        "Map the concept to an enterprise project scenario."
+      ],
+      "tags": [
+        "sql-data-validation",
+        "group-by",
+        "banking",
+        "lead-quality-engineer",
+        "hard"
+      ]
+    },
+    {
+      "id": "UI_-09475",
+      "title": "POM for Banking API-first transformation",
+      "difficulty": "Hard",
+      "category": "UI_AUTOMATION",
+      "concept": "POM",
+      "domain": "Banking",
+      "role": "Lead Quality Engineer",
+      "context": "API-first transformation",
+      "problem_statement": "Design, implement, test, or whiteboard a hard solution involving POM for Banking API-first transformation. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.",
+      "solution_outline": [
+        "Clarify expected input/output and business meaning.",
+        "Identify failure modes and data/automation risks.",
+        "Propose a simple baseline approach.",
+        "Optimize for deterministic behavior, maintainability, and observability.",
+        "Add unit/API/SQL/UI tests depending on the skill category.",
+        "Capture terminal or CI evidence.",
+        "Explain time/space complexity or operational complexity.",
+        "Map the concept to an enterprise project scenario."
+      ],
+      "tags": [
+        "ui-automation",
+        "pom",
+        "banking",
+        "lead-quality-engineer",
+        "hard"
+      ]
+    },
+    {
+      "id": "FRA-03878",
+      "title": "Reporting for Banking data platform migration",
+      "difficulty": "Hard",
+      "category": "FRAMEWORK_ARCHITECTURE",
+      "concept": "Reporting",
+      "domain": "Banking",
+      "role": "Lead Quality Engineer",
+      "context": "data platform migration",
+      "problem_statement": "Design, implement, test, or whiteboard a hard solution involving Reporting for Banking data platform migration. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.",
+      "solution_outline": [
+        "Clarify expected input/output and business meaning.",
+        "Identify failure modes and data/automation risks.",
+        "Propose a simple baseline approach.",
+        "Optimize for deterministic behavior, maintainability, and observability.",
+        "Add unit/API/SQL/UI tests depending on the skill category.",
+        "Capture terminal or CI evidence.",
+        "Explain time/space complexity or operational complexity.",
+        "Map the concept to an enterprise project scenario."
+      ],
+      "tags": [
+        "framework-architecture",
+        "reporting",
+        "banking",
+        "lead-quality-engineer",
+        "hard"
+      ]
+    },
+    {
+      "id": "RET-08094",
+      "title": "WMS for Banking high-volume transaction validation",
+      "difficulty": "Hard",
+      "category": "RETAIL_SUPPLY_CHAIN",
+      "concept": "WMS",
+      "domain": "Banking",
+      "role": "Lead Quality Engineer",
+      "context": "high-volume transaction validation",
+      "problem_statement": "Design, implement, test, or whiteboard a hard solution involving WMS for Banking high-volume transaction validation. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.",
+      "solution_outline": [
+        "Clarify expected input/output and business meaning.",
+        "Identify failure modes and data/automation risks.",
+        "Propose a simple baseline approach.",
+        "Optimize for deterministic behavior, maintainability, and observability.",
+        "Add unit/API/SQL/UI tests depending on the skill category.",
+        "Capture terminal or CI evidence.",
+        "Explain time/space complexity or operational complexity.",
+        "Map the concept to an enterprise project scenario."
+      ],
+      "tags": [
+        "retail-supply-chain",
+        "wms",
+        "banking",
+        "lead-quality-engineer",
+        "hard"
+      ]
+    },
+    {
+      "id": "CI_-08865",
+      "title": "Quality gates for Banking data platform migration",
+      "difficulty": "Hard",
+      "category": "CI_CD_DEVOPS",
+      "concept": "Quality gates",
+      "domain": "Banking",
+      "role": "Lead Quality Engineer",
+      "context": "data platform migration",
+      "problem_statement": "Design, implement, test, or whiteboard a hard solution involving Quality gates for Banking data platform migration. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.",
+      "solution_outline": [
+        "Clarify expected input/output and business meaning.",
+        "Identify failure modes and data/automation risks.",
+        "Propose a simple baseline approach.",
+        "Optimize for deterministic behavior, maintainability, and observability.",
+        "Add unit/API/SQL/UI tests depending on the skill category.",
+        "Capture terminal or CI evidence.",
+        "Explain time/space complexity or operational complexity.",
+        "Map the concept to an enterprise project scenario."
+      ],
+      "tags": [
+        "ci-cd-devops",
+        "quality-gates",
+        "banking",
+        "lead-quality-engineer",
+        "hard"
+      ]
+    },
+    {
+      "id": "PER-07556",
+      "title": "SLA validation for Banking API-first transformation",
+      "difficulty": "Hard",
+      "category": "PERFORMANCE_RELIABILITY",
+      "concept": "SLA validation",
+      "domain": "Banking",
+      "role": "Lead Quality Engineer",
+      "context": "API-first transformation",
+      "problem_statement": "Design, implement, test, or whiteboard a hard solution involving SLA validation for Banking API-first transformation. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.",
+      "solution_outline": [
+        "Clarify expected input/output and business meaning.",
+        "Identify failure modes and data/automation risks.",
+        "Propose a simple baseline approach.",
+        "Optimize for deterministic behavior, maintainability, and observability.",
+        "Add unit/API/SQL/UI tests depending on the skill category.",
+        "Capture terminal or CI evidence.",
+        "Explain time/space complexity or operational complexity.",
+        "Map the concept to an enterprise project scenario."
+      ],
+      "tags": [
+        "performance-reliability",
+        "sla-validation",
+        "banking",
+        "lead-quality-engineer",
+        "hard"
+      ]
+    }
+  ]
+}

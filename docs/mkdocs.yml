@@ -13,6 +13,7 @@ nav:
   - SQL & Data Validation: sql/index.md
   - API Testing: api/index.md
   - Practice Engine: practice/index.md
+  - Online IDE: ide/index.md
   - Automation:
       - Selenium: automation/selenium/index.md
       - Playwright: automation/playwright/index.md

@@ -1,0 +1,110 @@
+{
+  "SQL_DATA_VALIDATION": {
+    "model": "A strong SQL/data-validation answer begins by defining the business grain, source, target, and reconciliation rule. For enterprise migration or modernization work, I validate row counts, duplicate keys, missing records, transformation correctness, null handling, and control totals.\n\nExample validation layers:\n1. Source extract count versus landing count.\n2. Landing versus staging count.\n3. Staging versus curated/gold count.\n4. Business control totals by date, product, account, claim, or transaction type.\n5. Exception/reject table review.\n\nRepresentative SQL:\n```sql\nSELECT business_date, transaction_type, COUNT(*) AS txn_count, SUM(amount) AS total_amount\nFROM target_transactions\nGROUP BY business_date, transaction_type;\n```\n\nFor defects, I isolate whether the variance is due to missing records, duplicate records, transformation logic, cutoff timing, rounding, currency conversion, rejected rows, or delayed processing. Evidence includes SQL output, reconciliation reports, CI job logs, defect IDs, and release signoff criteria.",
+    "followups": [
+      "How would you automate this in CI/CD?",
+      "How would you handle late-arriving records?",
+      "How would you test rounding or currency conversion?",
+      "What is your go/no-go threshold?"
+    ]
+  },
+  "API_TESTING": {
+    "model": "A strong API testing answer starts with the contract: endpoint, method, authentication, headers, request payload, response schema, status codes, and downstream behavior. I validate happy path, negative path, boundary values, authorization, idempotency, retries, error messages, and observability.\n\nFor banking or healthcare APIs, I also validate audit trails, trace IDs, database persistence, event publication, and downstream reconciliation. I would automate with Postman/Newman or REST Assured and include the tests in CI/CD.\n\nRepresentative REST Assured sketch:\n```java\ngiven()\n  .header(\"Authorization\", \"Bearer \" + token)\n  .contentType(\"application/json\")\n  .body(request)\n.when()\n  .post(\"/payments\")\n.then()\n  .statusCode(201)\n  .body(\"status\", equalTo(\"ACCEPTED\"));\n```\n\nEvidence includes API reports, request/response samples with sensitive fields masked, logs, trace IDs, contract validation, and CI output.",
+    "followups": [
+      "How do you test idempotency?",
+      "How do you validate downstream events?",
+      "How do you handle contract drift?",
+      "What negative tests matter most?"
+    ]
+  },
+  "JAVA_STRINGS": {
+    "model": "A strong Java string answer clarifies case sensitivity, whitespace, punctuation, null handling, and expected output. For regex validation, I define the exact business rule first, then create positive and negative tests around boundary conditions.\n\nFor example, email or identifier validation should avoid overly broad regexes and should be backed by test cases:\n```java\nprivate static final Pattern ACCOUNT_ID = Pattern.compile(\"^[A-Z]{3}-\\\\d{6}$\");\n\npublic static boolean isValidAccountId(String value) {\n    return value != null && ACCOUNT_ID.matcher(value).matches();\n}\n```\n\nTesting should include null, empty, malformed, valid, lowercase, extra spaces, special characters, and length boundaries. Complexity is usually O(n) where n is string length.",
+    "followups": [
+      "When is regex the wrong tool?",
+      "How do you prevent catastrophic backtracking?",
+      "How would you test international characters?",
+      "How do you keep validation rules maintainable?"
+    ]
+  },
+  "JAVA_COLLECTIONS": {
+    "model": "A strong Java collections answer starts by clarifying whether order, uniqueness, and frequency matter. If order of first appearance matters, I use LinkedHashMap or LinkedHashSet rather than HashMap or HashSet.\n\nFor duplicate detection preserving first-seen order:\n```java\nMap<Integer, Integer> counts = new LinkedHashMap<>();\nfor (Integer value : input) {\n    counts.put(value, counts.getOrDefault(value, 0) + 1);\n}\nList<Integer> duplicates = counts.entrySet().stream()\n    .filter(e -> e.getValue() > 1)\n    .map(Map.Entry::getKey)\n    .toList();\n```\n\nTime complexity is O(n), space complexity is O(n). Tests should include null, empty, no duplicates, all duplicates, negative values, and repeated nulls if allowed.",
+    "followups": [
+      "Why LinkedHashMap instead of HashMap?",
+      "How would you handle huge input?",
+      "How would you make this streaming?",
+      "What edge cases would you test?"
+    ]
+  },
+  "FINTECH_BANKING": {
+    "model": "A strong banking QE answer anchors on the transaction lifecycle: initiation, validation, authorization, posting, settlement, reconciliation, exception handling, and reporting. I validate UI/API flows, ledger/database posting, downstream events, control totals, duplicate prevention, reversal handling, and audit evidence.\n\nFor payments, I test:\n- valid and invalid payment requests,\n- duplicate payment prevention,\n- authorization failures,\n- posting and settlement status,\n- reversal/refund flows,\n- cutoff dates and timezone behavior,\n- reconciliation across source, ledger, settlement, and reporting layers.\n\nEvidence includes API reports, SQL reconciliation, transaction trace IDs, audit logs, screenshots if UI is involved, and CI/CD results.",
+    "followups": [
+      "How would you test duplicate payment prevention?",
+      "How would you reconcile settlement?",
+      "What are release go/no-go criteria?",
+      "How do you test reversals?"
+    ]
+  },
+  "HEALTHCARE_PAYER": {
+    "model": "A strong healthcare payer answer anchors on member, provider, benefits, enrollment, eligibility, claims, remittance, and compliance. I connect test strategy to EDI X12, FHIR/HL7, FACETS/HealthRules/MMIS, and PHI protection.\n\nFor claims, I validate:\n- 837 intake,\n- member/provider eligibility,\n- benefit rules,\n- adjudication outcomes,\n- denial/adjustment logic,\n- 835 remittance,\n- downstream reporting,\n- reconciliation and audit evidence.\n\nI include negative testing for invalid member IDs, inactive coverage, missing provider data, duplicate claims, invalid diagnosis/procedure codes, and PHI masking.",
+    "followups": [
+      "How would you test 837 to 835 flow?",
+      "How do you protect PHI?",
+      "How do you reconcile claims?",
+      "What test data is needed?"
+    ]
+  },
+  "UI_AUTOMATION": {
+    "model": "A strong UI automation answer describes a maintainable framework: tests, pages, components, utilities, configuration, data, reporting, and CI/CD. For POM, each page object should expose business actions, not raw Selenium operations.\n\nKey practices:\n- stable locators,\n- explicit waits,\n- reusable components,\n- screenshots/traces on failure,\n- test data isolation,\n- parallel execution,\n- tagging/smoke/regression suites,\n- CI/CD report publishing.\n\nFor API-first transformation, I would set up data through APIs, validate critical UI workflows, and verify backend state through APIs or database checks.",
+    "followups": [
+      "How do you reduce flaky tests?",
+      "What belongs in a Page Object?",
+      "How do you combine API and UI tests?",
+      "How do you run in CI?"
+    ]
+  },
+  "CI_CD_DEVOPS": {
+    "model": "A strong CI/CD quality-gate answer defines entry and exit criteria for build promotion. Gates may include unit tests, API tests, UI smoke tests, SQL reconciliation checks, security scans, code quality checks, test coverage, deployment validation, and rollback readiness.\n\nFor data platform migration, I would include:\n- schema validation,\n- source-to-target count checks,\n- reconciliation thresholds,\n- failed batch checks,\n- data freshness checks,\n- smoke dashboards,\n- observability alerts.\n\nA release should not proceed if critical validations fail or reconciliation variance exceeds agreed thresholds.",
+    "followups": [
+      "What gates are blocking versus advisory?",
+      "How do you handle flaky tests?",
+      "What evidence do executives need?",
+      "How do you roll back?"
+    ]
+  },
+  "PERFORMANCE_RELIABILITY": {
+    "model": "A strong SLA validation answer defines the SLA/SLO first: latency, throughput, error rate, availability, and recovery behavior. For API-first banking transformation, I would test peak load, sustained load, spike load, failover, retries, throttling, and downstream dependency behavior.\n\nEvidence includes response-time percentiles, throughput, error rates, saturation metrics, logs, traces, and capacity recommendations. I would validate p95/p99 latency and ensure business-critical workflows stay within agreed thresholds.",
+    "followups": [
+      "Which metric matters most?",
+      "How do you test failover?",
+      "How do you identify bottlenecks?",
+      "How do you define pass/fail?"
+    ]
+  },
+  "FRAMEWORK_ARCHITECTURE": {
+    "model": "A strong framework architecture answer explains the layers: test orchestration, reusable utilities, data management, environment configuration, reporting, CI/CD integration, observability, and governance. Reporting should show pass/fail status, failure categories, trends, flaky tests, coverage, and release readiness.\n\nFor banking production readiness, reports should connect technical evidence to business risk: transaction flows tested, reconciliation status, unresolved critical defects, performance status, and go/no-go recommendation.",
+    "followups": [
+      "What should executives see?",
+      "How do you classify failures?",
+      "How do you reduce noise?",
+      "How do you measure release readiness?"
+    ]
+  },
+  "RETAIL_SUPPLY_CHAIN": {
+    "model": "A strong retail/supply-chain answer anchors on order, inventory, warehouse, transportation, fulfillment, and returns. If the domain is banking, this category should usually be filtered out; however, the transferable pattern is high-volume transaction validation, state transitions, reconciliation, and operational exception handling.\n\nI would validate lifecycle events, status transitions, duplicate messages, missing updates, reconciliation across systems, and monitoring dashboards.",
+    "followups": [
+      "How do you test state transitions?",
+      "How do you reconcile events?",
+      "How do you handle duplicate messages?",
+      "How do you test high volume?"
+    ]
+  },
+  "WHITEBOARD_ARCHITECTURE": {
+    "model": "A strong whiteboard answer follows a clear structure: business context, system boundaries, data flow, test layers, automation strategy, data validation, CI/CD gates, observability, risks, rollback, and release readiness.\n\nI would draw actors, systems, APIs/events/data stores, then annotate quality controls at each boundary. I would close with tradeoffs, risks, and the minimum evidence needed for signoff.",
+    "followups": [
+      "Where are the highest risks?",
+      "What would you automate first?",
+      "How do you prove readiness?",
+      "What tradeoffs did you make?"
+    ]
+  }
+}

@@ -1,30 +1,47 @@
 # Practice Engine
 
-The Practice Engine turns the catalog into interactive interview preparation.
+The Practice Engine supports coherent tutor-style interview preparation.
 
-## Start Practice
-
-```powershell
-python scripts\start_practice_session.py --role "Lead Quality Engineer" --domain Banking --difficulty Hard --count 10 --mode hints
-```
-
-## Reveal Hints and Solutions
+## Recommended Tutor Session
 
 ```powershell
-python scripts\reveal_solution.py --id SQL-00076 --level hint1
-python scripts\reveal_solution.py --id SQL-00076 --level hint2
-python scripts\reveal_solution.py --id SQL-00076 --level solution
+python scripts\start_practice_session.py --role "Lead Quality Engineer" --domain Banking --difficulty Hard --count 5 --mode tutor
 ```
 
-## Generate Interview Pack
+This creates a Markdown report under:
+
+```text
+practice/reports/
+```
+
+Each question includes:
+
+- question prompt
+- Hint 1
+- Hint 2
+- model answer
+- follow-up questions
+- scorecard
+- improvement notes
+
+## Export to ChatGPT Tutor Prompt
 
 ```powershell
-python scripts\generate_interview_pack.py --role "QE Architect" --domain "Healthcare Payer" --count 25
+python scripts\export_chatgpt_prompt.py --report practice\reports\session_YYYYMMDD_HHMMSS_tutor.md
 ```
 
-## Generate Skill Path
+Then start a new ChatGPT thread and paste the generated prompt.
+
+## Reveal One Solution
 
 ```powershell
-python scripts\generate_skill_path.py --skill SQL --weeks 4
-python scripts\generate_skill_path.py --skill Playwright --weeks 4
+python scripts\reveal_solution.py --id SQL-08230 --level solution
 ```
+
+## Online IDE Direction
+
+GitHub Pages is static, so it cannot run code by itself. For coding practice, use one of these:
+
+1. GitHub Codespaces for full online IDE.
+2. Local VS Code with this repo.
+3. Future enhancement: React + FastAPI + Monaco editor.
