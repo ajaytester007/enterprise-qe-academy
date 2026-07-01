@@ -1,0 +1,1654 @@
+[
+  {
+    "id": "SEC-00843",
+    "title": "PII for Banking observability and production readiness",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "SECURITY_PRIVACY",
+    "concept": "PII",
+    "original_problem": "Design a PII solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready PII strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for PII in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on data protection, least privilege, auditability, masking, encryption, retention, consent, and regulatory evidence. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "PII leakage",
+      "over-permissive access",
+      "weak audit trail",
+      "inconsistent masking",
+      "retention violations"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "masked data screenshots",
+      "access-control matrix",
+      "audit log samples",
+      "negative authorization tests",
+      "encryption validation evidence"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks PII rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for PII, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart TD\n  A[Requirement: PII] --> B[Risk analysis]\n  B --> C[Test design]\n  C --> D[Automation]\n  D --> E[CI/CD quality gate]\n  E --> F[Banking release evidence]\n  F --> G[Production readiness]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "ETL-01085",
+    "title": "CDC validation for Banking cloud migration",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "DATA_ENGINEERING",
+    "concept": "CDC validation",
+    "original_problem": "Design a CDC validation solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready CDC validation strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for CDC validation in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on source-to-target validation, reconciliation, schema drift, data quality rules, lineage, and recoverability. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "silent data loss",
+      "duplicate records",
+      "late-arriving data",
+      "schema drift",
+      "broken lineage"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "reconciliation report",
+      "DQ rule results",
+      "lineage proof",
+      "exception queue",
+      "rerun validation"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks CDC validation rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for CDC validation, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart LR\n  A[Source systems] --> B[Ingestion]\n  B --> C[Validation rules]\n  C --> D[Curated data]\n  C --> E[Exception queue]\n  D --> F[Analytics / downstream APIs]\n  C --> G[Quality evidence]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "WHI-02735",
+    "title": "Test strategy for Banking high-volume transaction validation",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "WHITEBOARD_ARCHITECTURE",
+    "concept": "Test strategy",
+    "original_problem": "Design a Test strategy solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready Test strategy strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for Test strategy in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on requirements clarity, risk-based testing, automation design, observability, evidence, and production readiness. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "unclear scope",
+      "missing negative tests",
+      "weak traceability",
+      "manual-only validation",
+      "poor readiness evidence"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "test plan",
+      "automation results",
+      "defect summary",
+      "traceability matrix",
+      "release sign-off"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks Test strategy rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for Test strategy, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart TD\n  A[Requirement: Test strategy] --> B[Risk analysis]\n  B --> C[Test design]\n  C --> D[Automation]\n  D --> E[CI/CD quality gate]\n  E --> F[Banking release evidence]\n  F --> G[Production readiness]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "HEA-03431",
+    "title": "MMIS for Banking CI/CD quality gate adoption",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "HEALTHCARE_PAYER",
+    "concept": "MMIS",
+    "original_problem": "Design a MMIS solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready MMIS strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for MMIS in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on requirements clarity, risk-based testing, automation design, observability, evidence, and production readiness. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "unclear scope",
+      "missing negative tests",
+      "weak traceability",
+      "manual-only validation",
+      "poor readiness evidence"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "test plan",
+      "automation results",
+      "defect summary",
+      "traceability matrix",
+      "release sign-off"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks MMIS rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for MMIS, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart TD\n  A[Requirement: MMIS] --> B[Risk analysis]\n  B --> C[Test design]\n  C --> D[Automation]\n  D --> E[CI/CD quality gate]\n  E --> F[Banking release evidence]\n  F --> G[Production readiness]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "UI_-03463",
+    "title": "Playwright for Banking regulatory reporting modernization",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "UI_AUTOMATION",
+    "concept": "Playwright",
+    "original_problem": "Design a Playwright solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready Playwright strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for Playwright in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on requirements clarity, risk-based testing, automation design, observability, evidence, and production readiness. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "unclear scope",
+      "missing negative tests",
+      "weak traceability",
+      "manual-only validation",
+      "poor readiness evidence"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "test plan",
+      "automation results",
+      "defect summary",
+      "traceability matrix",
+      "release sign-off"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks Playwright rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for Playwright, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart TD\n  A[Requirement: Playwright] --> B[Risk analysis]\n  B --> C[Test design]\n  C --> D[Automation]\n  D --> E[CI/CD quality gate]\n  E --> F[Banking release evidence]\n  F --> G[Production readiness]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "SEC-03525",
+    "title": "HIPAA for Banking cloud migration",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "SECURITY_PRIVACY",
+    "concept": "HIPAA",
+    "original_problem": "Design a HIPAA solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready HIPAA strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for HIPAA in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on data protection, least privilege, auditability, masking, encryption, retention, consent, and regulatory evidence. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "PII leakage",
+      "over-permissive access",
+      "weak audit trail",
+      "inconsistent masking",
+      "retention violations"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "masked data screenshots",
+      "access-control matrix",
+      "audit log samples",
+      "negative authorization tests",
+      "encryption validation evidence"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks HIPAA rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for HIPAA, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart TD\n  A[Requirement: HIPAA] --> B[Risk analysis]\n  B --> C[Test design]\n  C --> D[Automation]\n  D --> E[CI/CD quality gate]\n  E --> F[Banking release evidence]\n  F --> G[Production readiness]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "SEC-03867",
+    "title": "PII for Banking data governance program",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "SECURITY_PRIVACY",
+    "concept": "PII",
+    "original_problem": "Design a PII solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready PII strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for PII in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on data protection, least privilege, auditability, masking, encryption, retention, consent, and regulatory evidence. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "PII leakage",
+      "over-permissive access",
+      "weak audit trail",
+      "inconsistent masking",
+      "retention violations"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "masked data screenshots",
+      "access-control matrix",
+      "audit log samples",
+      "negative authorization tests",
+      "encryption validation evidence"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks PII rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for PII, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart TD\n  A[Requirement: PII] --> B[Risk analysis]\n  B --> C[Test design]\n  C --> D[Automation]\n  D --> E[CI/CD quality gate]\n  E --> F[Banking release evidence]\n  F --> G[Production readiness]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "FRA-03878",
+    "title": "Reporting for Banking data platform migration",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "FRAMEWORK_ARCHITECTURE",
+    "concept": "Reporting",
+    "original_problem": "Design a Reporting solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready Reporting strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for Reporting in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on requirements clarity, risk-based testing, automation design, observability, evidence, and production readiness. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "unclear scope",
+      "missing negative tests",
+      "weak traceability",
+      "manual-only validation",
+      "poor readiness evidence"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "test plan",
+      "automation results",
+      "defect summary",
+      "traceability matrix",
+      "release sign-off"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks Reporting rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for Reporting, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart TD\n  A[Requirement: Reporting] --> B[Risk analysis]\n  B --> C[Test design]\n  C --> D[Automation]\n  D --> E[CI/CD quality gate]\n  E --> F[Banking release evidence]\n  F --> G[Production readiness]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "JAV-03925",
+    "title": "HashSet for Banking test automation modernization",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "JAVA_STRINGS",
+    "concept": "HashSet",
+    "original_problem": "Design a HashSet solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready HashSet strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for HashSet in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on input normalization, null safety, encoding, validation rules, boundary tests, internationalization, and maintainable utilities. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "catastrophic regex backtracking",
+      "locale-sensitive bugs",
+      "null handling gaps",
+      "incorrect trimming",
+      "invalid unicode assumptions"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "unit-test matrix",
+      "boundary cases",
+      "code coverage",
+      "static analysis",
+      "complexity notes"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks HashSet rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for HashSet, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart TD\n  A[Requirement: HashSet] --> B[Risk analysis]\n  B --> C[Test design]\n  C --> D[Automation]\n  D --> E[CI/CD quality gate]\n  E --> F[Banking release evidence]\n  F --> G[Production readiness]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "SQL-04900",
+    "title": "Joins for Banking enterprise modernization",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "DATA_ENGINEERING",
+    "concept": "Joins",
+    "original_problem": "Design a Joins solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready Joins strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for Joins in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on source-to-target validation, reconciliation, schema drift, data quality rules, lineage, and recoverability. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "silent data loss",
+      "duplicate records",
+      "late-arriving data",
+      "schema drift",
+      "broken lineage"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "reconciliation report",
+      "DQ rule results",
+      "lineage proof",
+      "exception queue",
+      "rerun validation"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks Joins rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for Joins, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart LR\n  A[Source systems] --> B[Ingestion]\n  B --> C[Validation rules]\n  C --> D[Curated data]\n  C --> E[Exception queue]\n  D --> F[Analytics / downstream APIs]\n  C --> G[Quality evidence]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "JAV-05024",
+    "title": "Regex validation for Banking CI/CD quality gate adoption",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "JAVA_STRINGS",
+    "concept": "Regex validation",
+    "original_problem": "Design a Regex validation solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready Regex validation strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for Regex validation in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on input normalization, null safety, encoding, validation rules, boundary tests, internationalization, and maintainable utilities. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "catastrophic regex backtracking",
+      "locale-sensitive bugs",
+      "null handling gaps",
+      "incorrect trimming",
+      "invalid unicode assumptions"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "unit-test matrix",
+      "boundary cases",
+      "code coverage",
+      "static analysis",
+      "complexity notes"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks Regex validation rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for Regex validation, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart TD\n  A[Requirement: Regex validation] --> B[Risk analysis]\n  B --> C[Test design]\n  C --> D[Automation]\n  D --> E[CI/CD quality gate]\n  E --> F[Banking release evidence]\n  F --> G[Production readiness]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "RET-05646",
+    "title": "Promotions for Banking data governance program",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "RETAIL_SUPPLY_CHAIN",
+    "concept": "Promotions",
+    "original_problem": "Design a Promotions solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready Promotions strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for Promotions in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on requirements clarity, risk-based testing, automation design, observability, evidence, and production readiness. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "unclear scope",
+      "missing negative tests",
+      "weak traceability",
+      "manual-only validation",
+      "poor readiness evidence"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "test plan",
+      "automation results",
+      "defect summary",
+      "traceability matrix",
+      "release sign-off"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks Promotions rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for Promotions, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart TD\n  A[Requirement: Promotions] --> B[Risk analysis]\n  B --> C[Test design]\n  C --> D[Automation]\n  D --> E[CI/CD quality gate]\n  E --> F[Banking release evidence]\n  F --> G[Production readiness]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "JAV-05727",
+    "title": "Greedy for Banking data governance program",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "JAVA_STRINGS",
+    "concept": "Greedy",
+    "original_problem": "Design a Greedy solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready Greedy strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for Greedy in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on input normalization, null safety, encoding, validation rules, boundary tests, internationalization, and maintainable utilities. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "catastrophic regex backtracking",
+      "locale-sensitive bugs",
+      "null handling gaps",
+      "incorrect trimming",
+      "invalid unicode assumptions"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "unit-test matrix",
+      "boundary cases",
+      "code coverage",
+      "static analysis",
+      "complexity notes"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks Greedy rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for Greedy, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart TD\n  A[Requirement: Greedy] --> B[Risk analysis]\n  B --> C[Test design]\n  C --> D[Automation]\n  D --> E[CI/CD quality gate]\n  E --> F[Banking release evidence]\n  F --> G[Production readiness]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "PER-06062",
+    "title": "LoadRunner for Banking CI/CD quality gate adoption",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "PERFORMANCE_RELIABILITY",
+    "concept": "LoadRunner",
+    "original_problem": "Design a LoadRunner solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready LoadRunner strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for LoadRunner in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on SLO/SLA definition, p95/p99 latency, throughput, error budget, saturation, resiliency, failover, and recovery. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "latency regression",
+      "downstream saturation",
+      "retry storms",
+      "capacity gaps",
+      "unverified failover"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "load-test report",
+      "latency percentiles",
+      "throughput graph",
+      "APM traces",
+      "capacity recommendation"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks LoadRunner rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for LoadRunner, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "sequenceDiagram\n  participant C as Client\n  participant A as API Gateway\n  participant S as Service\n  participant D as Downstream\n  C->>A: Request\n  A->>S: Authenticated call\n  S->>D: Dependency call\n  D-->>S: Response / failure\n  S-->>A: Contracted response\n  A-->>C: Status, payload, trace id",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "SEC-06801",
+    "title": "PII for Banking cloud migration",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "SECURITY_PRIVACY",
+    "concept": "PII",
+    "original_problem": "Design a PII solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready PII strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for PII in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on data protection, least privilege, auditability, masking, encryption, retention, consent, and regulatory evidence. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "PII leakage",
+      "over-permissive access",
+      "weak audit trail",
+      "inconsistent masking",
+      "retention violations"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "masked data screenshots",
+      "access-control matrix",
+      "audit log samples",
+      "negative authorization tests",
+      "encryption validation evidence"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks PII rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for PII, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart TD\n  A[Requirement: PII] --> B[Risk analysis]\n  B --> C[Test design]\n  C --> D[Automation]\n  D --> E[CI/CD quality gate]\n  E --> F[Banking release evidence]\n  F --> G[Production readiness]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "UI_-07063",
+    "title": "Cross-browser for Banking data platform migration",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "UI_AUTOMATION",
+    "concept": "Cross-browser",
+    "original_problem": "Design a Cross-browser solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready Cross-browser strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for Cross-browser in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on requirements clarity, risk-based testing, automation design, observability, evidence, and production readiness. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "unclear scope",
+      "missing negative tests",
+      "weak traceability",
+      "manual-only validation",
+      "poor readiness evidence"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "test plan",
+      "automation results",
+      "defect summary",
+      "traceability matrix",
+      "release sign-off"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks Cross-browser rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for Cross-browser, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart TD\n  A[Requirement: Cross-browser] --> B[Risk analysis]\n  B --> C[Test design]\n  C --> D[Automation]\n  D --> E[CI/CD quality gate]\n  E --> F[Banking release evidence]\n  F --> G[Production readiness]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "RET-07122",
+    "title": "Inventory for Banking CI/CD quality gate adoption",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "RETAIL_SUPPLY_CHAIN",
+    "concept": "Inventory",
+    "original_problem": "Design a Inventory solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready Inventory strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for Inventory in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on requirements clarity, risk-based testing, automation design, observability, evidence, and production readiness. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "unclear scope",
+      "missing negative tests",
+      "weak traceability",
+      "manual-only validation",
+      "poor readiness evidence"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "test plan",
+      "automation results",
+      "defect summary",
+      "traceability matrix",
+      "release sign-off"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks Inventory rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for Inventory, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart TD\n  A[Requirement: Inventory] --> B[Risk analysis]\n  B --> C[Test design]\n  C --> D[Automation]\n  D --> E[CI/CD quality gate]\n  E --> F[Banking release evidence]\n  F --> G[Production readiness]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "PER-07556",
+    "title": "SLA validation for Banking API-first transformation",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "PERFORMANCE_RELIABILITY",
+    "concept": "SLA validation",
+    "original_problem": "Design a SLA validation solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready SLA validation strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for SLA validation in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on SLO/SLA definition, p95/p99 latency, throughput, error budget, saturation, resiliency, failover, and recovery. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "latency regression",
+      "downstream saturation",
+      "retry storms",
+      "capacity gaps",
+      "unverified failover"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "load-test report",
+      "latency percentiles",
+      "throughput graph",
+      "APM traces",
+      "capacity recommendation"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks SLA validation rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for SLA validation, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "sequenceDiagram\n  participant C as Client\n  participant A as API Gateway\n  participant S as Service\n  participant D as Downstream\n  C->>A: Request\n  A->>S: Authenticated call\n  S->>D: Dependency call\n  D-->>S: Response / failure\n  S-->>A: Contracted response\n  A-->>C: Status, payload, trace id",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "ETL-07943",
+    "title": "PySpark for Banking data governance program",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "DATA_ENGINEERING",
+    "concept": "PySpark",
+    "original_problem": "Design a PySpark solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready PySpark strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for PySpark in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on source-to-target validation, reconciliation, schema drift, data quality rules, lineage, and recoverability. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "silent data loss",
+      "duplicate records",
+      "late-arriving data",
+      "schema drift",
+      "broken lineage"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "reconciliation report",
+      "DQ rule results",
+      "lineage proof",
+      "exception queue",
+      "rerun validation"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks PySpark rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for PySpark, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart LR\n  A[Source systems] --> B[Ingestion]\n  B --> C[Validation rules]\n  C --> D[Curated data]\n  C --> E[Exception queue]\n  D --> F[Analytics / downstream APIs]\n  C --> G[Quality evidence]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "RET-08094",
+    "title": "WMS for Banking high-volume transaction validation",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "RETAIL_SUPPLY_CHAIN",
+    "concept": "WMS",
+    "original_problem": "Design a WMS solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready WMS strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for WMS in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on requirements clarity, risk-based testing, automation design, observability, evidence, and production readiness. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "unclear scope",
+      "missing negative tests",
+      "weak traceability",
+      "manual-only validation",
+      "poor readiness evidence"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "test plan",
+      "automation results",
+      "defect summary",
+      "traceability matrix",
+      "release sign-off"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks WMS rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for WMS, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart TD\n  A[Requirement: WMS] --> B[Risk analysis]\n  B --> C[Test design]\n  C --> D[Automation]\n  D --> E[CI/CD quality gate]\n  E --> F[Banking release evidence]\n  F --> G[Production readiness]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "SQL-08230",
+    "title": "Group By for Banking cloud migration",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "DATA_ENGINEERING",
+    "concept": "Group By",
+    "original_problem": "Design a Group By solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready Group By strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for Group By in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on source-to-target validation, reconciliation, schema drift, data quality rules, lineage, and recoverability. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "silent data loss",
+      "duplicate records",
+      "late-arriving data",
+      "schema drift",
+      "broken lineage"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "reconciliation report",
+      "DQ rule results",
+      "lineage proof",
+      "exception queue",
+      "rerun validation"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks Group By rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for Group By, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart LR\n  A[Source systems] --> B[Ingestion]\n  B --> C[Validation rules]\n  C --> D[Curated data]\n  C --> E[Exception queue]\n  D --> F[Analytics / downstream APIs]\n  C --> G[Quality evidence]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "JAV-08426",
+    "title": "Anagram detection for Banking data governance program",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "JAVA_STRINGS",
+    "concept": "Anagram detection",
+    "original_problem": "Design a Anagram detection solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready Anagram detection strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for Anagram detection in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on input normalization, null safety, encoding, validation rules, boundary tests, internationalization, and maintainable utilities. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "catastrophic regex backtracking",
+      "locale-sensitive bugs",
+      "null handling gaps",
+      "incorrect trimming",
+      "invalid unicode assumptions"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "unit-test matrix",
+      "boundary cases",
+      "code coverage",
+      "static analysis",
+      "complexity notes"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks Anagram detection rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for Anagram detection, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart TD\n  A[Requirement: Anagram detection] --> B[Risk analysis]\n  B --> C[Test design]\n  C --> D[Automation]\n  D --> E[CI/CD quality gate]\n  E --> F[Banking release evidence]\n  F --> G[Production readiness]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "SEC-08691",
+    "title": "PHI for Banking data governance program",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "SECURITY_PRIVACY",
+    "concept": "PHI",
+    "original_problem": "Design a PHI solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready PHI strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for PHI in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on data protection, least privilege, auditability, masking, encryption, retention, consent, and regulatory evidence. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "PII leakage",
+      "over-permissive access",
+      "weak audit trail",
+      "inconsistent masking",
+      "retention violations"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "masked data screenshots",
+      "access-control matrix",
+      "audit log samples",
+      "negative authorization tests",
+      "encryption validation evidence"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks PHI rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for PHI, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart TD\n  A[Requirement: PHI] --> B[Risk analysis]\n  B --> C[Test design]\n  C --> D[Automation]\n  D --> E[CI/CD quality gate]\n  E --> F[Banking release evidence]\n  F --> G[Production readiness]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "CI_-08865",
+    "title": "Quality gates for Banking data platform migration",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "CI_CD_DEVOPS",
+    "concept": "Quality gates",
+    "original_problem": "Design a Quality gates solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready Quality gates strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for Quality gates in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on requirements clarity, risk-based testing, automation design, observability, evidence, and production readiness. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "unclear scope",
+      "missing negative tests",
+      "weak traceability",
+      "manual-only validation",
+      "poor readiness evidence"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "test plan",
+      "automation results",
+      "defect summary",
+      "traceability matrix",
+      "release sign-off"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks Quality gates rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for Quality gates, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart TD\n  A[Requirement: Quality gates] --> B[Risk analysis]\n  B --> C[Test design]\n  C --> D[Automation]\n  D --> E[CI/CD quality gate]\n  E --> F[Banking release evidence]\n  F --> G[Production readiness]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "JAV-08893",
+    "title": "LinkedHashMap for Banking enterprise modernization",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "JAVA_STRINGS",
+    "concept": "LinkedHashMap",
+    "original_problem": "Design a LinkedHashMap solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready LinkedHashMap strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for LinkedHashMap in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on input normalization, null safety, encoding, validation rules, boundary tests, internationalization, and maintainable utilities. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "catastrophic regex backtracking",
+      "locale-sensitive bugs",
+      "null handling gaps",
+      "incorrect trimming",
+      "invalid unicode assumptions"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "unit-test matrix",
+      "boundary cases",
+      "code coverage",
+      "static analysis",
+      "complexity notes"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks LinkedHashMap rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for LinkedHashMap, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart TD\n  A[Requirement: LinkedHashMap] --> B[Risk analysis]\n  B --> C[Test design]\n  C --> D[Automation]\n  D --> E[CI/CD quality gate]\n  E --> F[Banking release evidence]\n  F --> G[Production readiness]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "FRA-08990",
+    "title": "Reporting for Banking observability and production readiness",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "FRAMEWORK_ARCHITECTURE",
+    "concept": "Reporting",
+    "original_problem": "Design a Reporting solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready Reporting strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for Reporting in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on requirements clarity, risk-based testing, automation design, observability, evidence, and production readiness. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "unclear scope",
+      "missing negative tests",
+      "weak traceability",
+      "manual-only validation",
+      "poor readiness evidence"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "test plan",
+      "automation results",
+      "defect summary",
+      "traceability matrix",
+      "release sign-off"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks Reporting rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for Reporting, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart TD\n  A[Requirement: Reporting] --> B[Risk analysis]\n  B --> C[Test design]\n  C --> D[Automation]\n  D --> E[CI/CD quality gate]\n  E --> F[Banking release evidence]\n  F --> G[Production readiness]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "JAV-09254",
+    "title": "Normalization for Banking CI/CD quality gate adoption",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "JAVA_STRINGS",
+    "concept": "Normalization",
+    "original_problem": "Design a Normalization solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready Normalization strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for Normalization in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on input normalization, null safety, encoding, validation rules, boundary tests, internationalization, and maintainable utilities. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "catastrophic regex backtracking",
+      "locale-sensitive bugs",
+      "null handling gaps",
+      "incorrect trimming",
+      "invalid unicode assumptions"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "unit-test matrix",
+      "boundary cases",
+      "code coverage",
+      "static analysis",
+      "complexity notes"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks Normalization rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for Normalization, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart TD\n  A[Requirement: Normalization] --> B[Risk analysis]\n  B --> C[Test design]\n  C --> D[Automation]\n  D --> E[CI/CD quality gate]\n  E --> F[Banking release evidence]\n  F --> G[Production readiness]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  },
+  {
+    "id": "UI_-09475",
+    "title": "POM for Banking API-first transformation",
+    "domain": "Banking",
+    "role": "Lead Quality Engineer",
+    "difficulty": "Hard",
+    "category": "UI_AUTOMATION",
+    "concept": "POM",
+    "original_problem": "Design a POM solution for Banking.",
+    "learning_objective": "Explain and defend a production-ready POM strategy for Banking as a Lead Quality Engineer.",
+    "assumptions": [
+      "The workflow is business-critical in Banking.",
+      "Requirements, expected outputs, and non-functional thresholds can be clarified with stakeholders.",
+      "CI/CD, observability, and evidence retention are expected for release readiness."
+    ],
+    "model_answer": "I would start by clarifying the business workflow, data grain, upstream/downstream systems, and release risk for POM in a Banking account onboarding scenario. Because this is a hard Lead Quality Engineer interview problem, I would show lead-level ownership, cross-team coordination, automation strategy, risk-based prioritization, and release evidence.\n\nMy solution would focus on requirements clarity, risk-based testing, automation design, observability, evidence, and production readiness. I would define the acceptance criteria first, map them to testable controls, and separate validation into unit/component, API or integration, data, security, performance, and UAT evidence. For automation, I would create reusable checks that run in CI/CD, tag tests by risk and domain, and publish results with traceable evidence.\n\nFor production readiness, I would require clear pass/fail gates, defect triage rules, rollback criteria, monitoring dashboards, log/trace correlation, and sign-off from engineering, product, security, and business stakeholders where applicable. The key is not only proving that the happy path works, but proving that edge cases, failure behavior, auditability, and operational recovery are controlled.",
+    "edge_cases": [
+      "unclear scope",
+      "missing negative tests",
+      "weak traceability",
+      "manual-only validation",
+      "poor readiness evidence"
+    ],
+    "validation_strategy": [
+      "Clarify acceptance criteria and map each requirement to executable tests.",
+      "Cover happy path, negative path, boundary conditions, failure modes, and regression impact.",
+      "Automate repeatable checks and publish results as CI/CD quality-gate evidence.",
+      "Validate observability with logs, metrics, traces, dashboards, and alert thresholds.",
+      "Confirm release readiness with traceability, defect disposition, rollback criteria, and stakeholder sign-off."
+    ],
+    "evidence_expected": [
+      "test plan",
+      "automation results",
+      "defect summary",
+      "traceability matrix",
+      "release sign-off"
+    ],
+    "follow_up_questions": [
+      "How would you automate this without making the suite brittle?",
+      "What would you include in release-readiness evidence?",
+      "How would you test failure behavior and recovery?",
+      "Which risks would you escalate before go-live?",
+      "How would you explain the result to a non-technical stakeholder?"
+    ],
+    "common_mistakes": [
+      "Jumping into tools before clarifying scope and risk.",
+      "Only testing happy paths.",
+      "Missing evidence that can survive audit or release review.",
+      "Treating non-functional requirements as optional.",
+      "Failing to connect automation results to business readiness."
+    ],
+    "coding_prompt": "Create a small validation utility or test harness that checks POM rules for a Banking workflow. Include positive, negative, null/empty, boundary, and malformed-input tests.",
+    "whiteboard_prompt": "Whiteboard the Banking flow for POM, including inputs, validation points, failure handling, observability, evidence, and release gates.",
+    "mermaid_diagram": "flowchart TD\n  A[Requirement: POM] --> B[Risk analysis]\n  B --> C[Test design]\n  C --> D[Automation]\n  D --> E[CI/CD quality gate]\n  E --> F[Banking release evidence]\n  F --> G[Production readiness]",
+    "quality_score": 100,
+    "quality_notes": [
+      "Generated content includes assumptions, strategy, risks, evidence, and readiness coverage."
+    ]
+  }
+]

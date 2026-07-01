@@ -1,0 +1,31 @@
+name: v4 Content Factory
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "catalog/**"
+      - "platform_core/**"
+      - "scripts/build_v4_content_factory.py"
+      - "scripts/generate_v4_content_factory_portal.py"
+      - "scripts/build_v4_content_release.py"
+      - ".github/workflows/v4-content-factory.yml"
+
+jobs:
+  build-content-factory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Build v4 content factory release
+        run: |
+          python scripts/build_v4_content_release.py --domain Banking --role "Lead Quality Engineer" --difficulty Hard --limit 250
+      - name: Upload content factory artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: v4-content-factory
+          path: |
+            outputs/v4/content_factory/**
+            docs/docs/v4/content-factory.md

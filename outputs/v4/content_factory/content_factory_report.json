@@ -1,0 +1,28 @@
+{
+  "total_catalog_rows": 10080,
+  "selected_rows": 28,
+  "enriched_items": 28,
+  "average_quality_score": 100.0,
+  "category_counts": {
+    "SECURITY_PRIVACY": 5,
+    "DATA_ENGINEERING": 4,
+    "WHITEBOARD_ARCHITECTURE": 1,
+    "HEALTHCARE_PAYER": 1,
+    "UI_AUTOMATION": 3,
+    "FRAMEWORK_ARCHITECTURE": 2,
+    "JAVA_STRINGS": 6,
+    "RETAIL_SUPPLY_CHAIN": 3,
+    "PERFORMANCE_RELIABILITY": 2,
+    "CI_CD_DEVOPS": 1
+  },
+  "domain_counts": {
+    "Banking": 28
+  },
+  "generated_files": [
+    "C:\\GitHub\\Enterprise_QE_Academy_Consumable_GitSolution\\enterprise_qe_academy_consumable_solution\\outputs\\v4\\content_factory\\enriched_content.jsonl",
+    "C:\\GitHub\\Enterprise_QE_Academy_Consumable_GitSolution\\enterprise_qe_academy_consumable_solution\\outputs\\v4\\content_factory\\enriched_content.json",
+    "C:\\GitHub\\Enterprise_QE_Academy_Consumable_GitSolution\\enterprise_qe_academy_consumable_solution\\outputs\\v4\\content_factory\\enriched_content.md",
+    "C:\\GitHub\\Enterprise_QE_Academy_Consumable_GitSolution\\enterprise_qe_academy_consumable_solution\\outputs\\v4\\content_factory\\content_factory_report.json",
+    "C:\\GitHub\\Enterprise_QE_Academy_Consumable_GitSolution\\enterprise_qe_academy_consumable_solution\\outputs\\v4\\content_factory\\content_factory_report.md"
+  ]
+}
