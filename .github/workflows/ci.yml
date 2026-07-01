@@ -17,4 +17,7 @@ jobs:
           distribution: temurin
           java-version: '17'
       - run: python scripts/validate_catalog.py
+      - run: python scripts/validate_practice_assets.py
+      - run: python scripts/practice_pipeline.py --domain Banking --role "Lead Quality Engineer" --difficulty Hard --count 3 --prompt-mode all --include-pack --include-solutions
+      - run: python scripts/generate_practice_html.py --report latest
       - run: cd java/core && mvn clean test
