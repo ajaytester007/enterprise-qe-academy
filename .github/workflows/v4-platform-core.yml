@@ -1,0 +1,30 @@
+name: V4 Platform Core
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "platform_core/**"
+      - "scripts/generate_v4_platform_core.py"
+      - "scripts/generate_v4_portal_pages.py"
+      - "catalog/questions.jsonl"
+
+jobs:
+  generate-v4-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Generate v4 platform assets
+        run: |
+          python scripts/generate_v4_platform_core.py --domain Banking --role "Lead Quality Engineer" --difficulty Hard --limit 100
+          python scripts/generate_v4_portal_pages.py
+      - name: Upload v4 assets
+        uses: actions/upload-artifact@v4
+        with:
+          name: enterprise-qe-academy-v4-assets
+          path: |
+            outputs/v4
+            docs/docs/v4
