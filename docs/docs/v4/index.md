@@ -1,19 +1,22 @@
 # Enterprise QE Academy v4
 
-Enterprise QE Academy v4 introduces a platform-core layer above the existing catalog and practice scripts.
+## Platform modules
 
-## Modules
+- Knowledge Engine
+- Adaptive Interview Simulator
+- Coding Lab Scaffold
+- Whiteboard Studio Scaffold
+- Learning Analytics
+- Enterprise Domain Packs
 
-- Knowledge Engine: converts catalog rows into structured knowledge nodes.
-- Domain Packs: groups scenarios by business domain.
-- Adaptive Interview Simulator: asks one question, scores the answer, and recommends follow-up improvement.
-- Coding Lab Scaffold: creates starter-code manifests for future Monaco/editor integration.
-- Whiteboard Studio Scaffold: creates architecture/design exercise manifests.
-- Learning Analytics: summarizes coverage by domain, role, category, and difficulty.
+## Coverage by domain
 
-## Local generation
+| Item | Count |
+|---|---:|
+| Banking | 28 |
 
-```powershell
-python .\scripts\generate_v4_platform_core.py --domain Banking --role "Lead Quality Engineer" --difficulty Hard --limit 250
-python .\scripts\generate_v4_portal_pages.py
-```
+## Coverage by difficulty
+
+| Item | Count |
+|---|---:|
+| Hard | 28 |

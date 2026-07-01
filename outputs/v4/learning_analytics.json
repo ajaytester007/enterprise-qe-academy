@@ -1,0 +1,33 @@
+{
+  "total_nodes": 28,
+  "by_domain": {
+    "Banking": 28
+  },
+  "by_role": {
+    "Lead Quality Engineer": 28
+  },
+  "by_difficulty": {
+    "Hard": 28
+  },
+  "by_category": {
+    "SECURITY_PRIVACY": 5,
+    "JAVA_STRINGS": 3,
+    "RETAIL_SUPPLY_CHAIN": 3,
+    "UI_AUTOMATION": 3,
+    "ETL_DATA_QUALITY": 2,
+    "FRAMEWORK_ARCHITECTURE": 2,
+    "JAVA_COLLECTIONS": 2,
+    "PERFORMANCE_RELIABILITY": 2,
+    "SQL_DATA_VALIDATION": 2,
+    "CI_CD_DEVOPS": 1,
+    "HEALTHCARE_PAYER": 1,
+    "JAVA_ALGORITHMS": 1,
+    "WHITEBOARD_ARCHITECTURE": 1
+  },
+  "readiness_bands": {
+    "foundation": "0-59",
+    "interview_capable": "60-74",
+    "strong_candidate": "75-89",
+    "principal_ready": "90-100"
+  }
+}

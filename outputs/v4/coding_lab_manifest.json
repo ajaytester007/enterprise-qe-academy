@@ -1,0 +1,853 @@
+{
+  "supported_languages": [
+    "java",
+    "python",
+    "sql",
+    "javascript",
+    "typescript"
+  ],
+  "execution_mode": "scaffold-first; browser/runtime integration can be added later",
+  "exercise_count": 28,
+  "starter_templates": {
+    "java": "public class Solution { public static boolean validate(String input) { return input != null; } }",
+    "python": "def validate(value):\n    return value is not None\n",
+    "sql": "-- Write validation query here\nSELECT 1;",
+    "typescript": "export function validate(value: unknown): boolean { return value !== null && value !== undefined; }"
+  },
+  "sample_exercises": [
+    {
+      "id": "SEC-00843",
+      "title": "PII for Banking observability and production readiness",
+      "domain": "Banking",
+      "role": "Lead Quality Engineer",
+      "difficulty": "Hard",
+      "category": "SECURITY_PRIVACY",
+      "concept": "PII",
+      "problem": "Design, implement, test, or whiteboard a hard solution involving PII for Banking observability and production readiness. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.",
+      "skills": [
+        "Security",
+        "Data Quality",
+        "Architecture"
+      ],
+      "prerequisites": [
+        "Enterprise QA fundamentals",
+        "Requirements analysis",
+        "Test strategy",
+        "Defect lifecycle"
+      ],
+      "tags": [
+        "Architecture",
+        "Banking",
+        "Data Quality",
+        "PII",
+        "SECURITY_PRIVACY",
+        "Security"
+      ],
+      "exercise_types": [
+        "interview",
+        "whiteboard",
+        "coding"
+      ],
+      "model_answer": "For PII in a Banking context, I would first clarify the business workflow, data grain, systems involved, regulatory or operational risk, and the exact acceptance criteria expected from a Lead Quality Engineer. I would then design the validation approach across happy path, negative path, boundary conditions, integration points, data integrity, security/privacy, performance, and operational readiness. The automation strategy would separate fast checks for pull requests from deeper regression, data reconciliation, and non-functional suites that run on schedule or before release. Evidence would include executable test results, traceable requirements coverage, defect triage notes, logs, metrics, dashboards, API payload samples, database reconciliation results, and a go/no-go summary. Production readiness would require monitoring, rollback criteria, alert thresholds, test data controls, access controls, and support handoff.",
+      "hints": [
+        "Start by clarifying scope, systems, data, and risk for PII in Banking.",
+        "Use a structure: assumptions, approach, validation, edge cases, evidence, readiness, risks."
+      ],
+      "followups": [
+        "How would you automate this in CI/CD?",
+        "What evidence proves the release is ready?",
+        "Which production risks remain after testing?",
+        "How would you explain this to a business stakeholder?"
+      ],
+      "rubric": [
+        {
+          "name": "Problem understanding",
+          "points": 15,
+          "description": "Clarifies scope, business context, constraints, and assumptions."
+        },
+        {
+          "name": "Technical approach",
+          "points": 20,
+          "description": "Presents a realistic design or implementation approach."
+        },
+        {
+          "name": "Edge cases and risks",
+          "points": 15,
+          "description": "Covers failure modes, boundary cases, negative scenarios, and quality risks."
+        },
+        {
+          "name": "Testing strategy",
+          "points": 20,
+          "description": "Defines unit, API, integration, data, performance, security, and regression validation."
+        },
+        {
+          "name": "Evidence and observability",
+          "points": 10,
+          "description": "Explains logs, metrics, traces, reports, screenshots, test evidence, and readiness signals."
+        },
+        {
+          "name": "Communication",
+          "points": 20,
+          "description": "Gives a structured answer suitable for a lead or architect interview."
+        }
+      ],
+      "evidence": [
+        "Allure or HTML report",
+        "CI run link",
+        "Traceability matrix",
+        "Defect summary",
+        "Go/no-go notes"
+      ]
+    },
+    {
+      "id": "ETL-01085",
+      "title": "CDC validation for Banking cloud migration",
+      "domain": "Banking",
+      "role": "Lead Quality Engineer",
+      "difficulty": "Hard",
+      "category": "ETL_DATA_QUALITY",
+      "concept": "CDC validation",
+      "problem": "Design, implement, test, or whiteboard a hard solution involving CDC validation for Banking cloud migration. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.",
+      "skills": [
+        "Data Quality",
+        "Architecture"
+      ],
+      "prerequisites": [
+        "Enterprise QA fundamentals",
+        "Requirements analysis",
+        "Test strategy",
+        "Defect lifecycle"
+      ],
+      "tags": [
+        "Architecture",
+        "Banking",
+        "CDC validation",
+        "Data Quality",
+        "ETL_DATA_QUALITY"
+      ],
+      "exercise_types": [
+        "interview",
+        "whiteboard",
+        "coding"
+      ],
+      "model_answer": "For CDC validation in a Banking context, I would first clarify the business workflow, data grain, systems involved, regulatory or operational risk, and the exact acceptance criteria expected from a Lead Quality Engineer. I would then design the validation approach across happy path, negative path, boundary conditions, integration points, data integrity, security/privacy, performance, and operational readiness. The automation strategy would separate fast checks for pull requests from deeper regression, data reconciliation, and non-functional suites that run on schedule or before release. Evidence would include executable test results, traceable requirements coverage, defect triage notes, logs, metrics, dashboards, API payload samples, database reconciliation results, and a go/no-go summary. Production readiness would require monitoring, rollback criteria, alert thresholds, test data controls, access controls, and support handoff.",
+      "hints": [
+        "Start by clarifying scope, systems, data, and risk for CDC validation in Banking.",
+        "Use a structure: assumptions, approach, validation, edge cases, evidence, readiness, risks."
+      ],
+      "followups": [
+        "How would you automate this in CI/CD?",
+        "What evidence proves the release is ready?",
+        "Which production risks remain after testing?",
+        "How would you explain this to a business stakeholder?"
+      ],
+      "rubric": [
+        {
+          "name": "Problem understanding",
+          "points": 15,
+          "description": "Clarifies scope, business context, constraints, and assumptions."
+        },
+        {
+          "name": "Technical approach",
+          "points": 20,
+          "description": "Presents a realistic design or implementation approach."
+        },
+        {
+          "name": "Edge cases and risks",
+          "points": 15,
+          "description": "Covers failure modes, boundary cases, negative scenarios, and quality risks."
+        },
+        {
+          "name": "Testing strategy",
+          "points": 20,
+          "description": "Defines unit, API, integration, data, performance, security, and regression validation."
+        },
+        {
+          "name": "Evidence and observability",
+          "points": 10,
+          "description": "Explains logs, metrics, traces, reports, screenshots, test evidence, and readiness signals."
+        },
+        {
+          "name": "Communication",
+          "points": 20,
+          "description": "Gives a structured answer suitable for a lead or architect interview."
+        }
+      ],
+      "evidence": [
+        "Allure or HTML report",
+        "CI run link",
+        "Traceability matrix",
+        "Defect summary",
+        "Go/no-go notes"
+      ]
+    },
+    {
+      "id": "WHI-02735",
+      "title": "Test strategy for Banking high-volume transaction validation",
+      "domain": "Banking",
+      "role": "Lead Quality Engineer",
+      "difficulty": "Hard",
+      "category": "WHITEBOARD_ARCHITECTURE",
+      "concept": "Test strategy",
+      "problem": "Design, implement, test, or whiteboard a hard solution involving Test strategy for Banking high-volume transaction validation. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.",
+      "skills": [
+        "Data Quality",
+        "Architecture"
+      ],
+      "prerequisites": [
+        "Enterprise QA fundamentals",
+        "Requirements analysis",
+        "Test strategy",
+        "Defect lifecycle"
+      ],
+      "tags": [
+        "Architecture",
+        "Banking",
+        "Data Quality",
+        "Test strategy",
+        "WHITEBOARD_ARCHITECTURE"
+      ],
+      "exercise_types": [
+        "interview",
+        "whiteboard",
+        "coding"
+      ],
+      "model_answer": "For Test strategy in a Banking context, I would first clarify the business workflow, data grain, systems involved, regulatory or operational risk, and the exact acceptance criteria expected from a Lead Quality Engineer. I would then design the validation approach across happy path, negative path, boundary conditions, integration points, data integrity, security/privacy, performance, and operational readiness. The automation strategy would separate fast checks for pull requests from deeper regression, data reconciliation, and non-functional suites that run on schedule or before release. Evidence would include executable test results, traceable requirements coverage, defect triage notes, logs, metrics, dashboards, API payload samples, database reconciliation results, and a go/no-go summary. Production readiness would require monitoring, rollback criteria, alert thresholds, test data controls, access controls, and support handoff.",
+      "hints": [
+        "Start by clarifying scope, systems, data, and risk for Test strategy in Banking.",
+        "Use a structure: assumptions, approach, validation, edge cases, evidence, readiness, risks."
+      ],
+      "followups": [
+        "How would you automate this in CI/CD?",
+        "What evidence proves the release is ready?",
+        "Which production risks remain after testing?",
+        "How would you explain this to a business stakeholder?"
+      ],
+      "rubric": [
+        {
+          "name": "Problem understanding",
+          "points": 15,
+          "description": "Clarifies scope, business context, constraints, and assumptions."
+        },
+        {
+          "name": "Technical approach",
+          "points": 20,
+          "description": "Presents a realistic design or implementation approach."
+        },
+        {
+          "name": "Edge cases and risks",
+          "points": 15,
+          "description": "Covers failure modes, boundary cases, negative scenarios, and quality risks."
+        },
+        {
+          "name": "Testing strategy",
+          "points": 20,
+          "description": "Defines unit, API, integration, data, performance, security, and regression validation."
+        },
+        {
+          "name": "Evidence and observability",
+          "points": 10,
+          "description": "Explains logs, metrics, traces, reports, screenshots, test evidence, and readiness signals."
+        },
+        {
+          "name": "Communication",
+          "points": 20,
+          "description": "Gives a structured answer suitable for a lead or architect interview."
+        }
+      ],
+      "evidence": [
+        "Allure or HTML report",
+        "CI run link",
+        "Traceability matrix",
+        "Defect summary",
+        "Go/no-go notes"
+      ]
+    },
+    {
+      "id": "HEA-03431",
+      "title": "MMIS for Banking CI/CD quality gate adoption",
+      "domain": "Banking",
+      "role": "Lead Quality Engineer",
+      "difficulty": "Hard",
+      "category": "HEALTHCARE_PAYER",
+      "concept": "MMIS",
+      "problem": "Design, implement, test, or whiteboard a hard solution involving MMIS for Banking CI/CD quality gate adoption. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.",
+      "skills": [
+        "Data Quality",
+        "CI/CD",
+        "Architecture"
+      ],
+      "prerequisites": [
+        "Enterprise QA fundamentals",
+        "Requirements analysis",
+        "Test strategy",
+        "Defect lifecycle"
+      ],
+      "tags": [
+        "Architecture",
+        "Banking",
+        "CI/CD",
+        "Data Quality",
+        "HEALTHCARE_PAYER",
+        "MMIS"
+      ],
+      "exercise_types": [
+        "interview",
+        "whiteboard",
+        "coding"
+      ],
+      "model_answer": "For MMIS in a Banking context, I would first clarify the business workflow, data grain, systems involved, regulatory or operational risk, and the exact acceptance criteria expected from a Lead Quality Engineer. I would then design the validation approach across happy path, negative path, boundary conditions, integration points, data integrity, security/privacy, performance, and operational readiness. The automation strategy would separate fast checks for pull requests from deeper regression, data reconciliation, and non-functional suites that run on schedule or before release. Evidence would include executable test results, traceable requirements coverage, defect triage notes, logs, metrics, dashboards, API payload samples, database reconciliation results, and a go/no-go summary. Production readiness would require monitoring, rollback criteria, alert thresholds, test data controls, access controls, and support handoff.",
+      "hints": [
+        "Start by clarifying scope, systems, data, and risk for MMIS in Banking.",
+        "Use a structure: assumptions, approach, validation, edge cases, evidence, readiness, risks."
+      ],
+      "followups": [
+        "How would you automate this in CI/CD?",
+        "What evidence proves the release is ready?",
+        "Which production risks remain after testing?",
+        "How would you explain this to a business stakeholder?"
+      ],
+      "rubric": [
+        {
+          "name": "Problem understanding",
+          "points": 15,
+          "description": "Clarifies scope, business context, constraints, and assumptions."
+        },
+        {
+          "name": "Technical approach",
+          "points": 20,
+          "description": "Presents a realistic design or implementation approach."
+        },
+        {
+          "name": "Edge cases and risks",
+          "points": 15,
+          "description": "Covers failure modes, boundary cases, negative scenarios, and quality risks."
+        },
+        {
+          "name": "Testing strategy",
+          "points": 20,
+          "description": "Defines unit, API, integration, data, performance, security, and regression validation."
+        },
+        {
+          "name": "Evidence and observability",
+          "points": 10,
+          "description": "Explains logs, metrics, traces, reports, screenshots, test evidence, and readiness signals."
+        },
+        {
+          "name": "Communication",
+          "points": 20,
+          "description": "Gives a structured answer suitable for a lead or architect interview."
+        }
+      ],
+      "evidence": [
+        "Allure or HTML report",
+        "CI run link",
+        "Traceability matrix",
+        "Defect summary",
+        "Go/no-go notes"
+      ]
+    },
+    {
+      "id": "UI_-03463",
+      "title": "Playwright for Banking regulatory reporting modernization",
+      "domain": "Banking",
+      "role": "Lead Quality Engineer",
+      "difficulty": "Hard",
+      "category": "UI_AUTOMATION",
+      "concept": "Playwright",
+      "problem": "Design, implement, test, or whiteboard a hard solution involving Playwright for Banking regulatory reporting modernization. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.",
+      "skills": [
+        "Data Quality",
+        "Automation",
+        "Architecture"
+      ],
+      "prerequisites": [
+        "Enterprise QA fundamentals",
+        "Requirements analysis",
+        "Test strategy",
+        "Defect lifecycle"
+      ],
+      "tags": [
+        "Architecture",
+        "Automation",
+        "Banking",
+        "Data Quality",
+        "Playwright",
+        "UI_AUTOMATION"
+      ],
+      "exercise_types": [
+        "interview",
+        "whiteboard",
+        "coding"
+      ],
+      "model_answer": "For Playwright in a Banking context, I would first clarify the business workflow, data grain, systems involved, regulatory or operational risk, and the exact acceptance criteria expected from a Lead Quality Engineer. I would then design the validation approach across happy path, negative path, boundary conditions, integration points, data integrity, security/privacy, performance, and operational readiness. The automation strategy would separate fast checks for pull requests from deeper regression, data reconciliation, and non-functional suites that run on schedule or before release. Evidence would include executable test results, traceable requirements coverage, defect triage notes, logs, metrics, dashboards, API payload samples, database reconciliation results, and a go/no-go summary. Production readiness would require monitoring, rollback criteria, alert thresholds, test data controls, access controls, and support handoff.",
+      "hints": [
+        "Start by clarifying scope, systems, data, and risk for Playwright in Banking.",
+        "Use a structure: assumptions, approach, validation, edge cases, evidence, readiness, risks."
+      ],
+      "followups": [
+        "How would you automate this in CI/CD?",
+        "What evidence proves the release is ready?",
+        "Which production risks remain after testing?",
+        "How would you explain this to a business stakeholder?"
+      ],
+      "rubric": [
+        {
+          "name": "Problem understanding",
+          "points": 15,
+          "description": "Clarifies scope, business context, constraints, and assumptions."
+        },
+        {
+          "name": "Technical approach",
+          "points": 20,
+          "description": "Presents a realistic design or implementation approach."
+        },
+        {
+          "name": "Edge cases and risks",
+          "points": 15,
+          "description": "Covers failure modes, boundary cases, negative scenarios, and quality risks."
+        },
+        {
+          "name": "Testing strategy",
+          "points": 20,
+          "description": "Defines unit, API, integration, data, performance, security, and regression validation."
+        },
+        {
+          "name": "Evidence and observability",
+          "points": 10,
+          "description": "Explains logs, metrics, traces, reports, screenshots, test evidence, and readiness signals."
+        },
+        {
+          "name": "Communication",
+          "points": 20,
+          "description": "Gives a structured answer suitable for a lead or architect interview."
+        }
+      ],
+      "evidence": [
+        "Allure or HTML report",
+        "CI run link",
+        "Traceability matrix",
+        "Defect summary",
+        "Go/no-go notes"
+      ]
+    },
+    {
+      "id": "SEC-03525",
+      "title": "HIPAA for Banking cloud migration",
+      "domain": "Banking",
+      "role": "Lead Quality Engineer",
+      "difficulty": "Hard",
+      "category": "SECURITY_PRIVACY",
+      "concept": "HIPAA",
+      "problem": "Design, implement, test, or whiteboard a hard solution involving HIPAA for Banking cloud migration. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.",
+      "skills": [
+        "Security",
+        "Data Quality",
+        "Architecture"
+      ],
+      "prerequisites": [
+        "Enterprise QA fundamentals",
+        "Requirements analysis",
+        "Test strategy",
+        "Defect lifecycle"
+      ],
+      "tags": [
+        "Architecture",
+        "Banking",
+        "Data Quality",
+        "HIPAA",
+        "SECURITY_PRIVACY",
+        "Security"
+      ],
+      "exercise_types": [
+        "interview",
+        "whiteboard",
+        "coding"
+      ],
+      "model_answer": "For HIPAA in a Banking context, I would first clarify the business workflow, data grain, systems involved, regulatory or operational risk, and the exact acceptance criteria expected from a Lead Quality Engineer. I would then design the validation approach across happy path, negative path, boundary conditions, integration points, data integrity, security/privacy, performance, and operational readiness. The automation strategy would separate fast checks for pull requests from deeper regression, data reconciliation, and non-functional suites that run on schedule or before release. Evidence would include executable test results, traceable requirements coverage, defect triage notes, logs, metrics, dashboards, API payload samples, database reconciliation results, and a go/no-go summary. Production readiness would require monitoring, rollback criteria, alert thresholds, test data controls, access controls, and support handoff.",
+      "hints": [
+        "Start by clarifying scope, systems, data, and risk for HIPAA in Banking.",
+        "Use a structure: assumptions, approach, validation, edge cases, evidence, readiness, risks."
+      ],
+      "followups": [
+        "How would you automate this in CI/CD?",
+        "What evidence proves the release is ready?",
+        "Which production risks remain after testing?",
+        "How would you explain this to a business stakeholder?"
+      ],
+      "rubric": [
+        {
+          "name": "Problem understanding",
+          "points": 15,
+          "description": "Clarifies scope, business context, constraints, and assumptions."
+        },
+        {
+          "name": "Technical approach",
+          "points": 20,
+          "description": "Presents a realistic design or implementation approach."
+        },
+        {
+          "name": "Edge cases and risks",
+          "points": 15,
+          "description": "Covers failure modes, boundary cases, negative scenarios, and quality risks."
+        },
+        {
+          "name": "Testing strategy",
+          "points": 20,
+          "description": "Defines unit, API, integration, data, performance, security, and regression validation."
+        },
+        {
+          "name": "Evidence and observability",
+          "points": 10,
+          "description": "Explains logs, metrics, traces, reports, screenshots, test evidence, and readiness signals."
+        },
+        {
+          "name": "Communication",
+          "points": 20,
+          "description": "Gives a structured answer suitable for a lead or architect interview."
+        }
+      ],
+      "evidence": [
+        "Allure or HTML report",
+        "CI run link",
+        "Traceability matrix",
+        "Defect summary",
+        "Go/no-go notes"
+      ]
+    },
+    {
+      "id": "SEC-03867",
+      "title": "PII for Banking data governance program",
+      "domain": "Banking",
+      "role": "Lead Quality Engineer",
+      "difficulty": "Hard",
+      "category": "SECURITY_PRIVACY",
+      "concept": "PII",
+      "problem": "Design, implement, test, or whiteboard a hard solution involving PII for Banking data governance program. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.",
+      "skills": [
+        "Security",
+        "Data Quality",
+        "Architecture"
+      ],
+      "prerequisites": [
+        "Enterprise QA fundamentals",
+        "Requirements analysis",
+        "Test strategy",
+        "Defect lifecycle"
+      ],
+      "tags": [
+        "Architecture",
+        "Banking",
+        "Data Quality",
+        "PII",
+        "SECURITY_PRIVACY",
+        "Security"
+      ],
+      "exercise_types": [
+        "interview",
+        "whiteboard",
+        "coding"
+      ],
+      "model_answer": "For PII in a Banking context, I would first clarify the business workflow, data grain, systems involved, regulatory or operational risk, and the exact acceptance criteria expected from a Lead Quality Engineer. I would then design the validation approach across happy path, negative path, boundary conditions, integration points, data integrity, security/privacy, performance, and operational readiness. The automation strategy would separate fast checks for pull requests from deeper regression, data reconciliation, and non-functional suites that run on schedule or before release. Evidence would include executable test results, traceable requirements coverage, defect triage notes, logs, metrics, dashboards, API payload samples, database reconciliation results, and a go/no-go summary. Production readiness would require monitoring, rollback criteria, alert thresholds, test data controls, access controls, and support handoff.",
+      "hints": [
+        "Start by clarifying scope, systems, data, and risk for PII in Banking.",
+        "Use a structure: assumptions, approach, validation, edge cases, evidence, readiness, risks."
+      ],
+      "followups": [
+        "How would you automate this in CI/CD?",
+        "What evidence proves the release is ready?",
+        "Which production risks remain after testing?",
+        "How would you explain this to a business stakeholder?"
+      ],
+      "rubric": [
+        {
+          "name": "Problem understanding",
+          "points": 15,
+          "description": "Clarifies scope, business context, constraints, and assumptions."
+        },
+        {
+          "name": "Technical approach",
+          "points": 20,
+          "description": "Presents a realistic design or implementation approach."
+        },
+        {
+          "name": "Edge cases and risks",
+          "points": 15,
+          "description": "Covers failure modes, boundary cases, negative scenarios, and quality risks."
+        },
+        {
+          "name": "Testing strategy",
+          "points": 20,
+          "description": "Defines unit, API, integration, data, performance, security, and regression validation."
+        },
+        {
+          "name": "Evidence and observability",
+          "points": 10,
+          "description": "Explains logs, metrics, traces, reports, screenshots, test evidence, and readiness signals."
+        },
+        {
+          "name": "Communication",
+          "points": 20,
+          "description": "Gives a structured answer suitable for a lead or architect interview."
+        }
+      ],
+      "evidence": [
+        "Allure or HTML report",
+        "CI run link",
+        "Traceability matrix",
+        "Defect summary",
+        "Go/no-go notes"
+      ]
+    },
+    {
+      "id": "FRA-03878",
+      "title": "Reporting for Banking data platform migration",
+      "domain": "Banking",
+      "role": "Lead Quality Engineer",
+      "difficulty": "Hard",
+      "category": "FRAMEWORK_ARCHITECTURE",
+      "concept": "Reporting",
+      "problem": "Design, implement, test, or whiteboard a hard solution involving Reporting for Banking data platform migration. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.",
+      "skills": [
+        "Data Quality",
+        "Architecture"
+      ],
+      "prerequisites": [
+        "Enterprise QA fundamentals",
+        "Requirements analysis",
+        "Test strategy",
+        "Defect lifecycle"
+      ],
+      "tags": [
+        "Architecture",
+        "Banking",
+        "Data Quality",
+        "FRAMEWORK_ARCHITECTURE",
+        "Reporting"
+      ],
+      "exercise_types": [
+        "interview",
+        "whiteboard",
+        "coding"
+      ],
+      "model_answer": "For Reporting in a Banking context, I would first clarify the business workflow, data grain, systems involved, regulatory or operational risk, and the exact acceptance criteria expected from a Lead Quality Engineer. I would then design the validation approach across happy path, negative path, boundary conditions, integration points, data integrity, security/privacy, performance, and operational readiness. The automation strategy would separate fast checks for pull requests from deeper regression, data reconciliation, and non-functional suites that run on schedule or before release. Evidence would include executable test results, traceable requirements coverage, defect triage notes, logs, metrics, dashboards, API payload samples, database reconciliation results, and a go/no-go summary. Production readiness would require monitoring, rollback criteria, alert thresholds, test data controls, access controls, and support handoff.",
+      "hints": [
+        "Start by clarifying scope, systems, data, and risk for Reporting in Banking.",
+        "Use a structure: assumptions, approach, validation, edge cases, evidence, readiness, risks."
+      ],
+      "followups": [
+        "How would you automate this in CI/CD?",
+        "What evidence proves the release is ready?",
+        "Which production risks remain after testing?",
+        "How would you explain this to a business stakeholder?"
+      ],
+      "rubric": [
+        {
+          "name": "Problem understanding",
+          "points": 15,
+          "description": "Clarifies scope, business context, constraints, and assumptions."
+        },
+        {
+          "name": "Technical approach",
+          "points": 20,
+          "description": "Presents a realistic design or implementation approach."
+        },
+        {
+          "name": "Edge cases and risks",
+          "points": 15,
+          "description": "Covers failure modes, boundary cases, negative scenarios, and quality risks."
+        },
+        {
+          "name": "Testing strategy",
+          "points": 20,
+          "description": "Defines unit, API, integration, data, performance, security, and regression validation."
+        },
+        {
+          "name": "Evidence and observability",
+          "points": 10,
+          "description": "Explains logs, metrics, traces, reports, screenshots, test evidence, and readiness signals."
+        },
+        {
+          "name": "Communication",
+          "points": 20,
+          "description": "Gives a structured answer suitable for a lead or architect interview."
+        }
+      ],
+      "evidence": [
+        "Allure or HTML report",
+        "CI run link",
+        "Traceability matrix",
+        "Defect summary",
+        "Go/no-go notes"
+      ]
+    },
+    {
+      "id": "JAV-03925",
+      "title": "HashSet for Banking test automation modernization",
+      "domain": "Banking",
+      "role": "Lead Quality Engineer",
+      "difficulty": "Hard",
+      "category": "JAVA_COLLECTIONS",
+      "concept": "HashSet",
+      "problem": "Design, implement, test, or whiteboard a hard solution involving HashSet for Banking test automation modernization. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.",
+      "skills": [
+        "Data Quality",
+        "Automation",
+        "Java",
+        "Architecture"
+      ],
+      "prerequisites": [
+        "Enterprise QA fundamentals",
+        "Requirements analysis",
+        "Test strategy",
+        "Defect lifecycle"
+      ],
+      "tags": [
+        "Architecture",
+        "Automation",
+        "Banking",
+        "Data Quality",
+        "HashSet",
+        "JAVA_COLLECTIONS",
+        "Java"
+      ],
+      "exercise_types": [
+        "interview",
+        "whiteboard",
+        "coding"
+      ],
+      "model_answer": "For HashSet in a Banking context, I would first clarify the business workflow, data grain, systems involved, regulatory or operational risk, and the exact acceptance criteria expected from a Lead Quality Engineer. I would then design the validation approach across happy path, negative path, boundary conditions, integration points, data integrity, security/privacy, performance, and operational readiness. The automation strategy would separate fast checks for pull requests from deeper regression, data reconciliation, and non-functional suites that run on schedule or before release. Evidence would include executable test results, traceable requirements coverage, defect triage notes, logs, metrics, dashboards, API payload samples, database reconciliation results, and a go/no-go summary. Production readiness would require monitoring, rollback criteria, alert thresholds, test data controls, access controls, and support handoff.",
+      "hints": [
+        "Start by clarifying scope, systems, data, and risk for HashSet in Banking.",
+        "Use a structure: assumptions, approach, validation, edge cases, evidence, readiness, risks."
+      ],
+      "followups": [
+        "How would you automate this in CI/CD?",
+        "What evidence proves the release is ready?",
+        "Which production risks remain after testing?",
+        "How would you explain this to a business stakeholder?"
+      ],
+      "rubric": [
+        {
+          "name": "Problem understanding",
+          "points": 15,
+          "description": "Clarifies scope, business context, constraints, and assumptions."
+        },
+        {
+          "name": "Technical approach",
+          "points": 20,
+          "description": "Presents a realistic design or implementation approach."
+        },
+        {
+          "name": "Edge cases and risks",
+          "points": 15,
+          "description": "Covers failure modes, boundary cases, negative scenarios, and quality risks."
+        },
+        {
+          "name": "Testing strategy",
+          "points": 20,
+          "description": "Defines unit, API, integration, data, performance, security, and regression validation."
+        },
+        {
+          "name": "Evidence and observability",
+          "points": 10,
+          "description": "Explains logs, metrics, traces, reports, screenshots, test evidence, and readiness signals."
+        },
+        {
+          "name": "Communication",
+          "points": 20,
+          "description": "Gives a structured answer suitable for a lead or architect interview."
+        }
+      ],
+      "evidence": [
+        "Allure or HTML report",
+        "CI run link",
+        "Traceability matrix",
+        "Defect summary",
+        "Go/no-go notes"
+      ]
+    },
+    {
+      "id": "SQL-04900",
+      "title": "Joins for Banking enterprise modernization",
+      "domain": "Banking",
+      "role": "Lead Quality Engineer",
+      "difficulty": "Hard",
+      "category": "SQL_DATA_VALIDATION",
+      "concept": "Joins",
+      "problem": "Design, implement, test, or whiteboard a hard solution involving Joins for Banking enterprise modernization. Explain assumptions, edge cases, validation strategy, quality risks, evidence expected, complexity, and production-readiness considerations.",
+      "skills": [
+        "Data Quality",
+        "Architecture"
+      ],
+      "prerequisites": [
+        "Enterprise QA fundamentals",
+        "Requirements analysis",
+        "Test strategy",
+        "Defect lifecycle"
+      ],
+      "tags": [
+        "Architecture",
+        "Banking",
+        "Data Quality",
+        "Joins",
+        "SQL_DATA_VALIDATION"
+      ],
+      "exercise_types": [
+        "interview",
+        "whiteboard",
+        "coding"
+      ],
+      "model_answer": "For Joins in a Banking context, I would first clarify the business workflow, data grain, systems involved, regulatory or operational risk, and the exact acceptance criteria expected from a Lead Quality Engineer. I would then design the validation approach across happy path, negative path, boundary conditions, integration points, data integrity, security/privacy, performance, and operational readiness. The automation strategy would separate fast checks for pull requests from deeper regression, data reconciliation, and non-functional suites that run on schedule or before release. Evidence would include executable test results, traceable requirements coverage, defect triage notes, logs, metrics, dashboards, API payload samples, database reconciliation results, and a go/no-go summary. Production readiness would require monitoring, rollback criteria, alert thresholds, test data controls, access controls, and support handoff.",
+      "hints": [
+        "Start by clarifying scope, systems, data, and risk for Joins in Banking.",
+        "Use a structure: assumptions, approach, validation, edge cases, evidence, readiness, risks."
+      ],
+      "followups": [
+        "How would you automate this in CI/CD?",
+        "What evidence proves the release is ready?",
+        "Which production risks remain after testing?",
+        "How would you explain this to a business stakeholder?"
+      ],
+      "rubric": [
+        {
+          "name": "Problem understanding",
+          "points": 15,
+          "description": "Clarifies scope, business context, constraints, and assumptions."
+        },
+        {
+          "name": "Technical approach",
+          "points": 20,
+          "description": "Presents a realistic design or implementation approach."
+        },
+        {
+          "name": "Edge cases and risks",
+          "points": 15,
+          "description": "Covers failure modes, boundary cases, negative scenarios, and quality risks."
+        },
+        {
+          "name": "Testing strategy",
+          "points": 20,
+          "description": "Defines unit, API, integration, data, performance, security, and regression validation."
+        },
+        {
+          "name": "Evidence and observability",
+          "points": 10,
+          "description": "Explains logs, metrics, traces, reports, screenshots, test evidence, and readiness signals."
+        },
+        {
+          "name": "Communication",
+          "points": 20,
+          "description": "Gives a structured answer suitable for a lead or architect interview."
+        }
+      ],
+      "evidence": [
+        "Allure or HTML report",
+        "CI run link",
+        "Traceability matrix",
+        "Defect summary",
+        "Go/no-go notes"
+      ]
+    }
+  ]
+}

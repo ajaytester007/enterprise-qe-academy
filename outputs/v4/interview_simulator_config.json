@@ -1,0 +1,40 @@
+{
+  "interviewer_profiles": [
+    {
+      "id": "friendly_lead",
+      "name": "Friendly QE Lead",
+      "style": "encouraging",
+      "challenge_level": 2
+    },
+    {
+      "id": "skeptical_architect",
+      "name": "Skeptical QA Architect",
+      "style": "deep technical follow-up",
+      "challenge_level": 4
+    },
+    {
+      "id": "hiring_manager",
+      "name": "Hiring Manager",
+      "style": "business outcome and delivery focus",
+      "challenge_level": 3
+    },
+    {
+      "id": "bar_raiser",
+      "name": "Bar Raiser",
+      "style": "behavioral, evidence, ambiguity",
+      "challenge_level": 5
+    }
+  ],
+  "turn_policy": [
+    "Ask one question only.",
+    "Wait for candidate answer.",
+    "Score against rubric.",
+    "Ask one clarifying follow-up.",
+    "Give improvement note and next drill."
+  ],
+  "adaptive_rules": {
+    "score_lt_60": "downgrade difficulty and provide structured hint",
+    "score_60_to_84": "keep difficulty and ask sharper follow-up",
+    "score_ge_85": "upgrade difficulty or switch to architecture/coding variant"
+  }
+}
