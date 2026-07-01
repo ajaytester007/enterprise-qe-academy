@@ -1,0 +1,27 @@
+name: v5-static-platform
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'webapp/v5/**'
+      - 'platform_core/**'
+      - 'scripts/build_v5_static_platform.py'
+      - '.github/workflows/v5-static-platform.yml'
+
+jobs:
+  build-v5-static-platform:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build v5 static platform
+        run: python scripts/build_v5_static_platform.py
+      - name: Upload v5 site artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: enterprise-qe-academy-v5-site
+          path: outputs/v5/site
